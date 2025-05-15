@@ -1,0 +1,186 @@
+﻿@using Makeup.ViewModels
+@model MakeupArtistVM
+
+<main role="main" class="main-content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+                <h2 class="h3 mb-4 page-title">Artist Profile</h2>
+                <form asp-action="Profile" method="post" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row mt-5 align-items-center">
+                        <div class="col-md-3 text-center mb-5">
+                            <div class="avatar avatar-xl">
+                                <img src="@(Model.Avatar ?? "~/assets/avatars/face-1.jpg")"
+                                     alt="Artist Avatar"
+                                     class="avatar-img rounded-circle"
+                                     id="avatarPreview">
+                            </div>
+                            <div class="mt-2">
+                                <input type="file"
+                                       class="form-control-file"
+                                       id="avatarInput"
+                                       name="avatarFile"
+                                       accept="image/*"
+                                       style="display: none;">
+                                <button type="button"
+                                        class="btn btn-sm btn-outline-primary mt-2"
+                                        onclick="document.getElementById('avatarInput').click();">
+                                    Change Avatar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <div class="col-md-7">
+                                    <h4 class="mb-1">@Model.FullName</h4>
+                                    <p class="small mb-3">
+                                        <span class="badge badge-dark">@Model.Address</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-md-7">
+                                    <p class="text-muted">@Model.Bio</p>
+                                </div>
+                                <div class="col">
+                                    <p class="small mb-0 text-muted">Specialty: @Model.Specialty</p>
+                                    <p class="small mb-0 text-muted">Experience: @(Model.Experience.HasValue ? Model.Experience + " years" : "Not specified")</p>
+                                    <p class="small mb-0 text-muted">Home Visits: @(Model.IsAvailableAtHome ? "Yes" : "No")</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-4">
+                        <h4 class="mb-3">Personal Information</h4>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="FullName">Full Name</label>
+                                <input asp-for="FullName" class="form-control" required />
+                                <span asp-validation-for="FullName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="Experience">Years of Experience</label>
+                                <input asp-for="Experience" class="form-control" type="number" min="0" />
+                                <span asp-validation-for="Experience" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Bio">Bio</label>
+                            <textarea asp-for="Bio" class="form-control" rows="3"></textarea>
+                            <span asp-validation-for="Bio" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Specialty">Specialty</label>
+                            <input asp-for="Specialty" class="form-control" />
+                            <span asp-validation-for="Specialty" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input asp-for="IsAvailableAtHome" class="custom-control-input" type="checkbox" />
+                                <label asp-for="IsAvailableAtHome" class="custom-control-label">Available for home visits</label>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <h4 class="mb-3">Location Information</h4>
+                        <div class="form-group">
+                            <label asp-for="Address">Address</label>
+                            <input asp-for="Address" class="form-control" id="addressInput" autocomplete="off" required />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="Latitude">Latitude</label>
+                                <input asp-for="Latitude" class="form-control" id="latitudeInput" readonly />
+                                <span asp-validation-for="Latitude" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="Longitude">Longitude</label>
+                                <input asp-for="Longitude" class="form-control" id="longitudeInput" readonly />
+                                <span asp-validation-for="Longitude" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <!-- Thêm jQuery và jQuery UI -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script>
+        $(document).ready(function () {
+            $("#addressInput").autocomplete({
+                source: function (request, response) {
+                    // Gọi endpoint search-address
+                    $.ajax({
+                        url: "/api/user/search-address",
+                        data: { query: request.term },
+                        dataType: "json",
+                        success: function (data) {
+                            if (data.status === "OK") {
+                                response($.map(data.predictions, function (item) {
+                                    return {
+                                        label: item.description,
+                                        value: item.description,
+                                        placeId: item.place_id
+                                    };
+                                }));
+                            } else {
+                                response([]);
+                            }
+                        },
+                        error: function () {
+                            response([]);
+                        }
+                    });
+                },
+                minLength: 2,
+                select: function (event, ui) {
+                    // Gọi endpoint geocode để lấy tọa độ
+                    $.ajax({
+                        url: "/api/user/geocode",
+                        data: { placeId: ui.item.placeId },
+                        dataType: "json",
+                        success: function (data) {
+                            $("#addressInput").val(ui.item.value);
+                            $("#latitudeInput").val(data.latitude);
+                            $("#longitudeInput").val(data.longitude);
+                        },
+                        error: function () {
+                            alert("Error fetching coordinates. Please try again.");
+                            $("#latitudeInput").val("");
+                            $("#longitudeInput").val("");
+                        }
+                    });
+                    return false;
+                }
+            });
+
+            // Xử lý preview avatar
+            document.getElementById('avatarInput').addEventListener('change', function (e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        document.getElementById('avatarPreview').src = e.target.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+}

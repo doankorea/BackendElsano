@@ -1,0 +1,56 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Makeup.ViewModels.ServiceDetailEditVM
+
+@{
+    ViewData["title"] = "Edit Service";
+}
+
+<h3>Edit Service</h3>
+
+<div class="col-md-9">
+    <form asp-action="Edit" asp-controller="Service" method="post">
+        <input type="hidden" asp-for="ServiceDetailId" />
+        <input type="hidden" asp-for="ServiceId" />
+
+        <div class="form-group">
+            <label>Service Name</label>
+            <input class="form-control" value="@Model.ServiceName" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" readonly>@Model.Description</textarea>
+        </div>
+
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <div class="form-group">
+                <label>Service Image</label>
+                <div>
+                    <img src="@Model.ImageUrl" alt="@Model.ServiceName" style="max-width: 200px; max-height: 200px;" />
+                </div>
+                <small class="text-muted">Only Admin can change the image</small>
+            </div>
+        }
+
+        <div class="form-group">
+            <label asp-for="Price">Price</label>
+            <input asp-for="Price" class="form-control" type="number" step="0.01" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Duration">Duration (minutes)</label>
+            <input asp-for="Duration" class="form-control" type="number" />
+            <span asp-validation-for="Duration" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-action="Index" class="btn btn-secondary">Back to list of services</a>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+} 

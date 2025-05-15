@@ -1,0 +1,152 @@
+﻿@{
+    ViewData["Title"] = "Messages";
+}
+@using Makeup.ViewModels.MessagesViewModels
+@model IEnumerable<MessagesUsersListViewModel>
+<style>
+    .conversation-item {
+        cursor: pointer;
+        transition: background-color 0.2s;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+        .conversation-item:hover {
+            background-color: #2d3339 !important;
+        }
+
+        .conversation-item.active {
+            background-color: #3a4149 !important;
+            border-left: 3px solid #007bff;
+        }
+
+    #chat-messages .bg-primary {
+        background-color: #007bff !important;
+    }
+
+    #chat-messages .bg-secondary {
+        background-color: #6c757d !important;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .first-letter {
+        width: 40px;
+        height: 40px;
+        background-color: #3f51b5;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Conversation list (left panel) -->
+        <div class="col-12 col-md-4 col-lg-3 border-right border-muted p-0">
+            <div class="card border-0">
+                <div class="card-header bg-dark text-muted p-3">
+                    <h5 class="mb-0">Messages</h5>
+                    <div class="input-group mt-2">
+                        <input type="text" class="form-control bg-dark border-0 text-muted" id="search-input" placeholder="Search messages..." aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-dark border-0">
+                                <i class="fe fe-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0" style="max-height: 70vh; overflow-y: auto;">
+                    <ul class="list-group list-group-flush" id="conversation-list">
+                        @foreach (var item in Model)
+                        {
+                            if (item.Id > 0) // View-level check to avoid invalid IDs
+                            {
+                                <li class="list-group-item bg-dark border-muted p-3 conversation-item" data-user-id="@item.Id">
+                                    <div class="d-flex align-items-center">
+                                        @if (!string.IsNullOrEmpty(item.UserAvatar))
+                                        {
+                                            <img src="@item.UserAvatar" alt="@item.UserName" class="user-avatar mr-3">
+                                        }
+                                        else
+                                        {
+                                            <span class="first-letter mr-3">
+                                                @item.UserName.Substring(0, 1).ToUpper()
+                                            </span>
+                                        }
+                                        <div class="flex-fill">
+                                            <h6 class="mb-1 text-white">@item.UserName</h6>
+                                            <p class="mb-0 text-muted small">@item.LastMessage</p>
+                                            <small class="text-muted"></small>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat window (right panel) -->
+        <div class="col-12 col-md-8 col-lg-9 p-0">
+            <div class="card border-0 h-100">
+                <div class="card-header bg-dark border-muted p-3 d-flex align-items-center">
+                    <span class="first-letter mr-3" id="chat-avatar"></span>
+                    <h6 class="mb-0 text-white" id="chat-participant">Select a conversation</h6>
+                </div>
+                <div class="card-body p-3" id="chat-messages" style="max-height: 60vh; overflow-y: auto; background-color: #212529;">
+                    <div class="text-center text-muted" id="no-messages">
+                        <i class="fe fe-message-circle fe-32 mb-3"></i>
+                        <p>Select a conversation to start chatting.</p>
+                    </div>
+                </div>
+                <div class="card-footer bg-dark border-muted p-3">
+                    <form id="message-form">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-dark border-muted text-white" id="message-input" placeholder="Type a message..." aria-label="Message" disabled>
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit" disabled>
+                                    <i class="fe fe-send"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Khi nhấn vào một cuộc trò chuyện, chuyển đến trang chat tương ứng
+        $(".conversation-item").click(function () {
+            var userId = $(this).data("user-id");
+            window.location.href = "/Message/Chat?selectedUserId=" + userId;
+        });
+
+        // Lọc danh sách người dùng khi người dùng nhập vào ô tìm kiếm
+        $("#search-input").on("input", function () {
+            var searchTerm = $(this).val().toLowerCase();
+            $("#conversation-list .conversation-item").each(function () {
+                var userName = $(this).find("h6").text().toLowerCase();
+                if (userName.indexOf(searchTerm) > -1) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+    </script>
+}

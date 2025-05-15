@@ -1,0 +1,311 @@
+﻿@using Makeup.ViewModels.MessagesViewModels
+@model ChatViewModel
+@{
+    string firstLetter = string.IsNullOrEmpty(Model.ReceiverUserName) ? "" : Model.ReceiverUserName.Substring(0, 1).ToUpper();
+}
+<style>
+    .conversation-item {
+        cursor: pointer;
+        transition: background-color 0.2s;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+
+        .conversation-item:hover {
+            background-color: #2d3339 !important;
+        }
+
+        .conversation-item.active {
+            background-color: #3a4149 !important;
+            border-left: 3px solid #007bff;
+        }
+
+    #chat-messages .bg-primary {
+        background-color: #007bff !important;
+        border-radius: 15px 15px 0 15px;
+    }
+
+    #chat-messages .bg-secondary {
+        background-color: #495057 !important;
+        border-radius: 15px 15px 15px 0;
+    }
+
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .first-letter {
+        width: 40px;
+        height: 40px;
+        background-color: #3f51b5;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: white;
+    }
+
+    .message-bubble {
+        max-width: 70%;
+        padding: 12px 16px;
+        margin-bottom: 8px;
+        word-break: break-word;
+    }
+
+    .chat-input-container {
+        position: relative;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid #495057;
+    }
+
+    #message-input {
+        border: none;
+        border-radius: 24px;
+        padding: 12px 50px 12px 20px;
+        height: 50px;
+    }
+
+    .send-btn {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .typing-indicator {
+        display: none;
+        padding: 8px 15px;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.05);
+        width: fit-content;
+        margin-top: 5px;
+    }
+
+        .typing-indicator span {
+            height: 8px;
+            width: 8px;
+            background: rgba(255, 255, 255, 0.5);
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: typing 1s infinite;
+        }
+
+            .typing-indicator span:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+
+            .typing-indicator span:nth-child(3) {
+                animation-delay: 0.4s;
+            }
+
+    @@keyframes typing {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Conversation list (left panel) -->
+        <div class="col-12 col-md-4 col-lg-3 border-right border-muted p-0">
+            <div class="card border-0">
+                <div class="card-header bg-dark text-muted p-3">
+                    <h5 class="mb-0">Messages</h5>
+                    <div class="input-group mt-2">
+                        <input type="text" class="form-control bg-dark border-0 text-muted" placeholder="Search messages..." aria-label="Search">
+                        <div class="input-group-append">
+                            <span class="input-group-text bg-dark border-0">
+                                <i class="fe fe-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0" style="max-height: 70vh; overflow-y: auto;">
+                    <ul class="list-group list-group-flush">
+                        @if (!string.IsNullOrEmpty(Model.ReceiverUserName) && Model.ReceiverId > 0)
+                        {
+                            <li class="list-group-item bg-dark border-muted p-3 conversation-item active" data-user-id="@Model.ReceiverId">
+                                <div class="d-flex align-items-center">
+                                    @if (!string.IsNullOrEmpty(Model.ReceiverAvatar))
+                                    {
+                                        <img src="@Model.ReceiverAvatar" alt="@Model.ReceiverUserName" class="user-avatar mr-3">
+                                    }
+                                    else
+                                    {
+                                        <span class="first-letter mr-3">@firstLetter</span>
+                                    }
+                                    <div class="flex-fill">
+                                        <h6 class="mb-1 text-white">@Model.ReceiverUserName</h6>
+                                        <p class="mb-0 text-muted small"></p>
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat window (right panel) -->
+        <div class="col-12 col-md-8 col-lg-9 p-0">
+            <div class="card border-0 h-100">
+                <div class="card-header bg-dark border-muted p-3 d-flex align-items-center">
+                    @if (!string.IsNullOrEmpty(Model.ReceiverAvatar))
+                    {
+                        <img src="@Model.ReceiverAvatar" alt="@Model.ReceiverUserName" class="user-avatar mr-3">
+                    }
+                    else
+                    {
+                        <span class="first-letter mr-3">@firstLetter</span>
+                    }
+                    <div>
+                        <h6 class="mb-0 text-white">@Model.ReceiverUserName</h6>
+                        <small class="text-muted">Online</small>
+                    </div>
+                </div>
+                <div class="card-body p-3" id="chat-messages" style="max-height: 60vh; overflow-y: auto; background-color: #212529;">
+                    @if (!string.IsNullOrEmpty(Model.ReceiverUserName) && Model.ReceiverId > 0)
+                    {
+                        foreach (var item in Model.Messages)
+                        {
+                            var isSent = item.IsCurrentUserSentMessage ? "justify-content-end" : "justify-content-start";
+                            var bgClass = item.IsCurrentUserSentMessage ? "bg-primary" : "bg-secondary";
+                            <div class="d-flex mb-3 @isSent">
+                                <div class="p-2 rounded @bgClass text-white message-bubble">
+                                    <p class="mb-0">@item.Text</p>
+                                    <small class="text-muted">@item.DateTime</small>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-center text-muted" id="no-messages">
+                            <i class="fe fe-message-circle fe-32 mb-3"></i>
+                            <p>Select a conversation to start chatting.</p>
+                        </div>
+                    }
+                    
+                    <div class="typing-indicator" id="typing-indicator">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="card-footer bg-dark border-muted p-3">
+                    <div class="chat-input-container bg-dark">
+                        <input type="text" class="form-control bg-dark text-white" id="message-input" placeholder="Type a message..." aria-label="Message">
+                        <button class="btn btn-primary send-btn" type="button">
+                            <i class="fe fe-send"></i>
+                        </button>
+                    </div>
+                    <div class="error-message text-danger mt-2" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Kết nối SignalR
+        var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+        // Khởi động kết nối
+        connection.start().then(function () {
+            console.log("Connected!");
+        }).catch(function (err) {
+            console.error("Kết nối thất bại:", err.toString());
+        });
+
+        // Xử lý gửi tin nhắn khi click nút gửi
+        $(".send-btn").click(function () {
+            sendMessage();
+        });
+
+        // Xử lý gửi tin nhắn khi nhấn Enter
+        $("#message-input").keydown(function (e) {
+            if (e.keyCode === 13) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // Hàm chung để gửi tin nhắn
+        function sendMessage() {
+            var receiverId = parseInt("@Model.ReceiverId");
+            var message = $("#message-input").val().trim();
+            var $errorMessage = $(".error-message");
+
+            if (!message) {
+                console.log("Tin nhắn rỗng, không gửi.");
+                $errorMessage.text("Vui lòng nhập tin nhắn trước khi gửi!").show();
+                setTimeout(() => $errorMessage.hide(), 3000);
+                return;
+            }
+
+            $errorMessage.hide();
+            connection.invoke("SendMessage", receiverId, message).catch(function (err) {
+                console.error("Gửi tin nhắn thất bại:", err.toString());
+                $errorMessage.text("Gửi tin nhắn thất bại: " + err.toString()).show();
+                setTimeout(() => $errorMessage.hide(), 3000);
+            });
+            $("#message-input").val("").focus();
+        }
+
+        // Nhận tin nhắn thời gian thực
+        connection.on("ReceiveMessage", function (messageText, date, time, senderId) {
+            var currentUserId = parseInt("@Model.CurrentUserId");
+            var messageHtml = '';
+            if (parseInt(senderId) === currentUserId) {
+                messageHtml = `
+                    <div class="d-flex mb-3 justify-content-end">
+                        <div class="p-2 rounded bg-primary text-white message-bubble">
+                            <p class="mb-0">${messageText}</p>
+                            <small class="text-muted">${date} ${time}</small>
+                        </div>
+                    </div>
+                `;
+            } else {
+                $("#typing-indicator").hide();
+                
+                messageHtml = `
+                    <div class="d-flex mb-3 justify-content-start">
+                        <div class="p-2 rounded bg-secondary text-white message-bubble">
+                            <p class="mb-0">${messageText}</p>
+                            <small class="text-muted">${date} ${time}</small>
+                        </div>
+                    </div>
+                `;
+            }
+
+            $("#chat-messages").append(messageHtml);
+            $("#chat-messages").scrollTop($("#chat-messages")[0].scrollHeight);
+        });
+
+        // Cuộn xuống tin nhắn cuối khi tải trang
+        $(function () {
+            $("#chat-messages").scrollTop($("#chat-messages")[0].scrollHeight);
+            $("#message-input").focus();
+        });
+    </script>
+}

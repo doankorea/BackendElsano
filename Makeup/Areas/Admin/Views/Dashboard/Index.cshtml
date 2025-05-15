@@ -1,0 +1,747 @@
+﻿@*
+
+*@
+@{
+	Layout = "~/Areas/Admin/Views/Shared/_Layoutadmin.cshtml";
+	ViewData["Title"] = "Bảng điều khiển";
+	
+	// Helper function to find artist name without using lambda
+	string GetArtistName(int artistId)
+	{
+		if (ViewBag.AllArtists != null)
+		{
+			foreach (var artist in ViewBag.AllArtists)
+			{
+				if (artist.ArtistId == artistId)
+				{
+					return artist.FullName;
+				}
+			}
+		}
+		return "Không xác định";
+	}
+	
+	// Helper function to find service name without using lambda
+	string GetServiceName(int serviceId)
+	{
+		if (ViewBag.AllServices != null)
+		{
+			foreach (var service in ViewBag.AllServices)
+			{
+				if (service.ServiceId == serviceId)
+				{
+					return service.ServiceName;
+				}
+			}
+		}
+		return "Không xác định";
+	}
+}
+
+<main role="main">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-12">
+				<div class="row align-items-center mb-4">
+					<div class="col">
+						<h2 class="h3 mb-0 page-title">Bảng điều khiển hệ thống</h2>
+					</div>
+					<div class="col-auto">
+						<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#filterPanel" aria-expanded="false" aria-controls="filterPanel">
+							<i class="fe fe-filter fe-12 mr-2"></i>Bộ lọc
+						</button>
+					</div>
+				</div>
+
+				@* <!-- Quick Action Buttons -->
+				<div class="row mb-4">
+					<div class="col-12">
+						<div class="card shadow-sm">
+							<div class="card-body px-4 py-3">
+								<div class="row align-items-center">
+									<div class="col">
+										<h4 class="mb-0 text-uppercase">Quick Actions</h4>
+									</div>
+									<div class="col-auto">
+										<div class="btn-group" role="group">
+											<a href="@Url.Action("Create", "Appointments", new { area = "Admin" })" class="btn btn-primary">
+												<i class="fe fe-plus-circle fe-12 mr-2"></i>New Appointment
+											</a>
+											<a href="@Url.Action("Create", "Services", new { area = "Admin" })" class="btn btn-success">
+												<i class="fe fe-plus-circle fe-12 mr-2"></i>Add Service
+											</a>
+											<a href="@Url.Action("Create", "Artists", new { area = "Admin" })" class="btn btn-info">
+												<i class="fe fe-plus-circle fe-12 mr-2"></i>Add Artist
+											</a>
+											<a href="@Url.Action("Create", "Users", new { area = "Admin" })" class="btn btn-secondary">
+												<i class="fe fe-plus-circle fe-12 mr-2"></i>Add User
+											</a>
+											<a href="@Url.Action("Export", "Dashboard", new { area = "Admin" })" class="btn btn-dark">
+												<i class="fe fe-download fe-12 mr-2"></i>Export Report
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> *@
+
+				<!-- Filter Panel -->
+				<div class="collapse mb-4" id="filterPanel">
+					<div class="card shadow">
+						<div class="card-header">
+							<strong>Lọc dữ liệu bảng điều khiển</strong>
+						</div>
+						<div class="card-body">
+							<form asp-controller="Dashboard" asp-action="Filter" method="post" class="form-horizontal">
+								<div class="form-row">
+									<div class="form-group col-md-3">
+										<label for="TimePeriod">Khoảng thời gian</label>
+										<select id="TimePeriod" name="TimePeriod" class="form-control">
+											<option value="week" @(ViewBag.Filter?.TimePeriod == "week" ? "selected" : "")>Tuần trước</option>
+											<option value="month" @(ViewBag.Filter?.TimePeriod == "month" ? "selected" : "")>Tháng trước</option>
+											<option value="quarter" @(ViewBag.Filter?.TimePeriod == "quarter" ? "selected" : "")>Quý trước</option>
+											<option value="year" @(ViewBag.Filter?.TimePeriod == "year" ? "selected" : "")>Năm trước</option>
+											<option value="custom" @(ViewBag.Filter?.TimePeriod == "custom" ? "selected" : "")>Tùy chỉnh</option>
+										</select>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="ArtistId">Nghệ sĩ</label>
+										<select id="ArtistId" name="ArtistId" class="form-control">
+											<option value="">Tất cả nghệ sĩ</option>
+											@if (ViewBag.AllArtists != null)
+											{
+												foreach (var artist in ViewBag.AllArtists)
+												{
+													<option value="@artist.ArtistId" @(ViewBag.Filter?.ArtistId == artist.ArtistId ? "selected" : "")>
+														@artist.FullName
+													</option>
+												}
+											}
+										</select>
+									</div>
+									<div class="form-group col-md-3">
+										<label for="ServiceId">Dịch vụ</label>
+										<select id="ServiceId" name="ServiceId" class="form-control">
+											<option value="">Tất cả dịch vụ</option>
+											@if (ViewBag.AllServices != null)
+											{
+												foreach (var service in ViewBag.AllServices)
+												{
+													<option value="@service.ServiceId" @(ViewBag.Filter?.ServiceId == service.ServiceId ? "selected" : "")>
+														@service.ServiceName
+													</option>
+												}
+											}
+										</select>
+									</div>
+								</div>
+								<div class="form-row custom-date-range" style="display: @(ViewBag.Filter?.TimePeriod == "custom" ? "flex" : "none")">
+									<div class="form-group col-md-3">
+										<label for="StartDate">Ngày bắt đầu</label>
+										<input type="date" id="StartDate" name="StartDate" class="form-control" 
+											   value="@(ViewBag.Filter?.StartDate.ToString("yyyy-MM-dd"))" />
+									</div>
+									<div class="form-group col-md-3">
+										<label for="EndDate">Ngày kết thúc</label>
+										<input type="date" id="EndDate" name="EndDate" class="form-control" 
+											   value="@(ViewBag.Filter?.EndDate.ToString("yyyy-MM-dd"))" />
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="col-md-6">
+										<button type="submit" class="btn btn-primary">Áp dụng bộ lọc</button>
+										<a href="@Url.Action("Index", "Dashboard")" class="btn btn-outline-secondary">Đặt lại</a>
+									</div>
+									<div class="col-md-6 text-right">
+										<a href="@Url.Action("ExportData", "Dashboard", new { timePeriod = ViewBag.Filter?.TimePeriod, artistId = ViewBag.Filter?.ArtistId, serviceId = ViewBag.Filter?.ServiceId, startDate = ViewBag.Filter?.StartDate, endDate = ViewBag.Filter?.EndDate })" class="btn btn-success">
+											<i class="fe fe-download fe-12 mr-2"></i>Xuất dữ liệu
+										</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				
+
+				<!-- Statistics Cards -->
+				<div class="row mb-4">
+					<div class="col-md-3">
+						<div class="card shadow mb-4">
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col">
+										<small class="text-muted">Tổng số lịch hẹn</small>
+										<h3 class="card-title mb-0">@ViewBag.TotalAppointments</h3>
+										<p class="small text-muted mb-0">
+											<span class="fe fe-clipboard text-primary fe-12 mr-1"></span>
+											<span class="text-success">@string.Format("{0:0.0}%", ViewBag.TotalAppointments > 0 ? (double)ViewBag.CompletedCount / ViewBag.TotalAppointments * 100 : 0) đã hoàn thành</span>
+										</p>
+									</div>
+									<div class="col-auto">
+										<a href="@Url.Action("Index", "Appointments", new { area = "Admin" })" class="btn btn-sm btn-light" title="Xem tất cả lịch hẹn">
+											<span class="fe fe-calendar fe-24 text-primary"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card shadow mb-4">
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col">
+										<small class="text-muted">Doanh thu nền tảng (10%)</small>
+										<h3 class="card-title mb-0">@string.Format("{0:N0} VND", ViewBag.TotalAppRevenue)</h3>
+										<p class="small text-muted mb-0">
+											<span class="fe fe-trending-up text-success fe-12 mr-1"></span>
+											<span class="text-success">Tổng: @string.Format("{0:N0} VND", ViewBag.ArtistTotalRevenue)</span>
+										</p>
+									</div>
+									<div class="col-auto">
+										<a href="@Url.Action("Revenue", "Finance", new { area = "Admin" })" class="btn btn-sm btn-light" title="Xem chi tiết tài chính">
+											<span class="fe fe-dollar-sign fe-24 text-primary"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card shadow mb-4">
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col">
+										<small class="text-muted">Dịch vụ đang hoạt động</small>
+										<h3 class="card-title mb-0">@ViewBag.ActiveServices</h3>
+										<p class="small text-muted mb-0">
+											<span class="fe fe-layers text-primary fe-12 mr-1"></span>
+											<span class="text-muted">Trong tổng số @ViewBag.TotalServices</span>
+										</p>
+									</div>
+									<div class="col-auto">
+										<a href="@Url.Action("Index", "Services", new { area = "Admin" })" class="btn btn-sm btn-light" title="Quản lý dịch vụ">
+											<span class="fe fe-briefcase fe-24 text-primary"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card shadow mb-4">
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col">
+										<small class="text-muted">Người dùng & Nghệ sĩ</small>
+										<h3 class="card-title mb-0">@ViewBag.TotalUsers</h3>
+										<p class="small text-muted mb-0">
+											<span class="fe fe-user-check text-success fe-12 mr-1"></span>
+											<span class="text-success">@ViewBag.TotalArtists nghệ sĩ đã đăng ký</span>
+										</p>
+									</div>
+									<div class="col-auto">
+										<div class="dropdown">
+											<a href="#" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Quản lý người dùng">
+												<span class="fe fe-users fe-24 text-primary"></span>
+											</a>
+											<div class="dropdown-menu dropdown-menu-right">
+												<a class="dropdown-item" href="@Url.Action("Index", "Users", new { area = "Admin" })">
+													<i class="fe fe-users fe-16 mr-2"></i>Manage Users
+												</a>
+												<a class="dropdown-item" href="@Url.Action("Index", "Artists", new { area = "Admin" })">
+													<i class="fe fe-award fe-16 mr-2"></i>Manage Artists
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Charts Row - First row -->
+				<div class="row mb-4">
+					<div class="col-md-8">
+						<div class="card shadow">
+							<div class="card-header">
+								<strong class="card-title">Revenue Breakdown (Platform vs Artist Share)</strong>
+								<a class="float-right small text-muted" href="@Url.Action("Revenue", "Finance", new { area = "Admin" })">View Details</a>
+							</div>
+							<div class="card-body">
+								<div class="chart-area">
+									<canvas id="revenueChart" height="300"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="card shadow">
+							<div class="card-header">
+								<strong class="card-title">Appointment Status</strong>
+								<a class="float-right small text-muted" href="@Url.Action("Index", "Appointments", new { area = "Admin" })">View Details</a>
+							</div>
+							<div class="card-body">
+								<div class="chart-pie pt-4">
+									<canvas id="appointmentStatusChart"></canvas>
+								</div>
+								<div class="mt-4 text-center small">
+									<span class="mr-2">
+										<i class="fas fa-circle text-success"></i> Completed (@ViewBag.CompletedCount)
+									</span>
+									<span class="mr-2">
+										<i class="fas fa-circle text-primary"></i> Confirmed (@ViewBag.ConfirmedCount)
+									</span>
+									<span class="mr-2">
+										<i class="fas fa-circle text-warning"></i> Pending (@ViewBag.PendingCount)
+									</span>
+									<span class="mr-2">
+										<i class="fas fa-circle text-danger"></i> Cancelled (@ViewBag.CancelledCount)
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Charts Row - Second row -->
+				<div class="row mb-4">
+					<div class="col-md-6">
+						<div class="card shadow">
+							<div class="card-header">
+								<strong class="card-title">Popular Services</strong>
+								<a class="float-right small text-muted" href="@Url.Action("Index", "Services", new { area = "Admin" })">View All Services</a>
+							</div>
+							<div class="card-body">
+								<div class="chart-bar">
+									<canvas id="popularServicesChart" height="300"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card shadow">
+							<div class="card-header">
+								<strong class="card-title">Top Artists</strong>
+								<a class="float-right small text-muted" href="@Url.Action("Index", "Artists", new { area = "Admin" })">View All Artists</a>
+							</div>
+							<div class="card-body">
+								<div class="chart-bar">
+									<canvas id="artistAppointmentsChart" height="300"></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Detailed statistics -->
+				<div class="row mb-4">
+					<div class="col-md-12 mb-4">
+						<div class="card shadow">
+							<div class="card-header">
+								<strong>Appointment Status Details</strong>
+							</div>
+							<div class="card-body">
+								<div class="row align-items-center">
+									<div class="col-md-3 text-center mb-3">
+										<div class="bg-light p-3 rounded">
+											<h3 class="text-warning mb-1">@ViewBag.PendingCount</h3>
+											<p class="small text-muted mb-0"><span class="dot dot-md bg-warning mr-2"></span>Pending</p>
+										</div>
+									</div>
+									<div class="col-md-3 text-center mb-3">
+										<div class="bg-light p-3 rounded">
+											<h3 class="text-primary mb-1">@ViewBag.ConfirmedCount</h3>
+											<p class="small text-muted mb-0"><span class="dot dot-md bg-primary mr-2"></span>Confirmed</p>
+										</div>
+									</div>
+									<div class="col-md-3 text-center mb-3">
+										<div class="bg-light p-3 rounded">
+											<h3 class="text-success mb-1">@ViewBag.CompletedCount</h3>
+											<p class="small text-muted mb-0"><span class="dot dot-md bg-success mr-2"></span>Completed</p>
+										</div>
+									</div>
+									<div class="col-md-3 text-center mb-3">
+										<div class="bg-light p-3 rounded">
+											<h3 class="text-danger mb-1">@ViewBag.CancelledCount</h3>
+											<p class="small text-muted mb-0"><span class="dot dot-md bg-danger mr-2"></span>Cancelled</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Recent Data -->
+				<div class="row mb-4">
+					<div class="col-md-6">
+						<div class="card shadow mb-4">
+							<div class="card-header">
+								<strong class="card-title">Recent Appointments</strong>
+								<a class="float-right small text-muted" href="@Url.Action("Index", "Appointments", new { area = "Admin" })">View All Appointments</a>
+							</div>
+							<div class="card-body">
+								<div class="list-group list-group-flush my-n3">
+									@foreach (var appointment in ViewBag.RecentAppointments)
+									{
+										string statusClass = appointment.Status == "Completed" ? "success" : 
+															appointment.Status == "Confirmed" ? "primary" : 
+															appointment.Status == "Pending" ? "warning" : "danger";
+										
+										<div class="list-group-item">
+											<div class="row align-items-center">
+												<div class="col-auto">
+													<div class="avatar avatar-md">
+														@if (!string.IsNullOrEmpty(appointment.User?.Avatar))
+														{
+															<img src="@appointment.User.Avatar" alt="@appointment.User.UserName" class="avatar-img rounded-circle">
+														}
+														else
+														{
+															<div class="avatar-initial rounded-circle bg-primary">
+																@(appointment.User?.UserName?.Substring(0, 1).ToUpper() ?? "U")
+															</div>
+														}
+													</div>
+												</div>
+												<div class="col">
+													<small><strong>@appointment.ServiceDetail?.Service?.ServiceName</strong></small>
+													<div class="my-0 text-muted small">@appointment.User?.UserName • @appointment.AppointmentDate?.ToString("dd/MM/yyyy HH:mm")</div>
+													<small class="badge badge-@statusClass">@appointment.Status</small>
+												</div>
+												<div class="col-auto">
+													<div class="dropdown">
+														<button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<span class="text-muted sr-only">Action</span>
+														</button>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a class="dropdown-item" href="@Url.Action("Details", "Appointments", new { area = "Admin", id = appointment.AppointmentId })">
+																<i class="fe fe-eye fe-16 mr-2"></i>View Details
+															</a>
+															@if (appointment.Status == "Pending")
+															{
+																<a class="dropdown-item" href="@Url.Action("Confirm", "Appointments", new { area = "Admin", id = appointment.AppointmentId })">
+																	<i class="fe fe-check-circle fe-16 mr-2 text-success"></i>Confirm
+																</a>
+															}
+															@if (appointment.Status == "Confirmed")
+															{
+																<a class="dropdown-item" href="@Url.Action("Complete", "Appointments", new { area = "Admin", id = appointment.AppointmentId })">
+																	<i class="fe fe-check-square fe-16 mr-2 text-success"></i>Complete
+																</a>
+															}
+															@if (appointment.Status != "Cancelled" && appointment.Status != "Completed")
+															{
+																<a class="dropdown-item" href="@Url.Action("Cancel", "Appointments", new { area = "Admin", id = appointment.AppointmentId })">
+																	<i class="fe fe-x-circle fe-16 mr-2 text-danger"></i>Cancel
+																</a>
+															}
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									}
+									@if (ViewBag.RecentAppointments == null || ((System.Collections.IList)ViewBag.RecentAppointments).Count == 0)
+									{
+										<div class="text-center py-4">
+											<span class="fe fe-calendar-x fe-24 text-muted mb-2"></span>
+											<p>No recent appointments found</p>
+										</div>
+									}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="card shadow mb-4">
+							<div class="card-header">
+								<strong class="card-title">Recently Registered Users</strong>
+								<a class="float-right small text-muted" href="@Url.Action("Index", "Users", new { area = "Admin" })">View All Users</a>
+							</div>
+							<div class="card-body">
+								<div class="list-group list-group-flush my-n3">
+									@foreach (var user in ViewBag.RecentUsers)
+									{
+										<div class="list-group-item">
+											<div class="row align-items-center">
+												<div class="col-auto">
+													<div class="avatar avatar-md">
+														@if (!string.IsNullOrEmpty(user.Avatar))
+														{
+															<img src="@user.Avatar" alt="@user.UserName" class="avatar-img rounded-circle">
+														}
+														else
+														{
+															<div class="avatar-initial rounded-circle bg-primary">
+																@(user.UserName?.Substring(0, 1).ToUpper() ?? "U")
+															</div>
+														}
+													</div>
+												</div>
+												<div class="col">
+													<strong>@user.UserName</strong>
+													<div class="my-0 text-muted small">Registered: @((user.CreatedAt?.ToString("dd/MM/yyyy") ?? "Unknown"))</div>
+												</div>
+												<div class="col-auto">
+													<div class="dropdown">
+														<button class="btn btn-sm dropdown-toggle more-vertical" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<span class="text-muted sr-only">Action</span>
+														</button>
+														<div class="dropdown-menu dropdown-menu-right">
+															<a class="dropdown-item" href="@Url.Action("Details", "Users", new { area = "Admin", id = user.Id })">
+																<i class="fe fe-user fe-16 mr-2"></i>View Profile
+															</a>
+															<a class="dropdown-item" href="@Url.Action("Edit", "Users", new { area = "Admin", id = user.Id })">
+																<i class="fe fe-edit fe-16 mr-2"></i>Edit User
+															</a>
+															<a class="dropdown-item" href="@Url.Action("Appointments", "Users", new { area = "Admin", id = user.Id })">
+																<i class="fe fe-calendar fe-16 mr-2"></i>View Appointments
+															</a>
+															<div class="dropdown-divider"></div>
+															<a class="dropdown-item text-danger" href="@Url.Action("Delete", "Users", new { area = "Admin", id = user.Id })">
+																<i class="fe fe-trash fe-16 mr-2"></i>Delete User
+															</a>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									}
+									@if (ViewBag.RecentUsers == null || ((System.Collections.IList)ViewBag.RecentUsers).Count == 0)
+									{
+										<div class="text-center py-4">
+											<span class="fe fe-users fe-24 text-muted mb-2"></span>
+											<p>No recent users found</p>
+										</div>
+									}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+@section Scripts {
+	<!-- Chart.js -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+		// Handle custom date range visibility
+		$(document).ready(function() {
+			$('#TimePeriod').change(function() {
+				if ($(this).val() === 'custom') {
+					$('.custom-date-range').show();
+				} else {
+					$('.custom-date-range').hide();
+				}
+			});
+		});
+
+		document.addEventListener('DOMContentLoaded', function() {
+			// Define chart data
+			var timeLabels = @Html.Raw(Json.Serialize(ViewBag.TimeLabels));
+			var revenueData = @Html.Raw(Json.Serialize(ViewBag.RevenueData));
+			var platformFeeData = @Html.Raw(Json.Serialize(ViewBag.PlatformFeeData));
+			var artistRevenueData = @Html.Raw(Json.Serialize(ViewBag.ArtistRevenueData));
+			
+			var statusCounts = @Html.Raw(Json.Serialize(ViewBag.StatusCounts));
+			var serviceNames = @Html.Raw(Json.Serialize(ViewBag.ServiceNames));
+			var serviceBookings = @Html.Raw(Json.Serialize(ViewBag.ServiceBookings));
+			var artistNames = @Html.Raw(Json.Serialize(ViewBag.ArtistNames));
+			var artistAppointments = @Html.Raw(Json.Serialize(ViewBag.ArtistAppointments));
+			
+			// Revenue Chart
+			var revenueCtx = document.getElementById('revenueChart').getContext('2d');
+			var revenueChart = new Chart(revenueCtx, {
+				type: 'line',
+				data: {
+					labels: timeLabels,
+					datasets: [
+						{
+							label: 'Total Revenue (100%)',
+							data: revenueData,
+							borderColor: '#4e73df',
+							backgroundColor: 'rgba(78, 115, 223, 0.05)',
+							pointBackgroundColor: '#4e73df',
+							pointBorderColor: '#fff',
+							pointBorderWidth: 2,
+							pointRadius: 4,
+							tension: 0.3,
+							fill: true
+						},
+						{
+							label: 'Platform Revenue (10%)',
+							data: platformFeeData,
+							borderColor: '#e74a3b',
+							backgroundColor: 'rgba(231, 74, 59, 0.05)',
+							pointBackgroundColor: '#e74a3b',
+							pointBorderColor: '#fff',
+							pointBorderWidth: 2,
+							pointRadius: 4,
+							tension: 0.3,
+							fill: true
+						},
+						{
+							label: 'Artist Revenue (90%)',
+							data: artistRevenueData,
+							borderColor: '#1cc88a',
+							backgroundColor: 'rgba(28, 200, 138, 0.05)',
+							pointBackgroundColor: '#1cc88a',
+							pointBorderColor: '#fff',
+							pointBorderWidth: 2,
+							pointRadius: 4,
+							tension: 0.3,
+							fill: true
+						}
+					]
+				},
+				options: {
+					maintainAspectRatio: false,
+					scales: {
+						y: {
+							beginAtZero: true,
+							grid: {
+								color: 'rgba(0, 0, 0, 0.05)'
+							},
+							ticks: {
+								callback: function(value) {
+									return new Intl.NumberFormat('vi-VN', {
+										style: 'currency',
+										currency: 'VND',
+										maximumFractionDigits: 0
+									}).format(value);
+								}
+							}
+						},
+						x: {
+							grid: {
+								display: false
+							}
+						}
+					},
+					plugins: {
+						tooltip: {
+							callbacks: {
+								label: function(context) {
+									let label = context.dataset.label || '';
+									if (label) {
+										label += ': ';
+									}
+									if (context.parsed.y !== null) {
+										label += new Intl.NumberFormat('vi-VN', {
+											style: 'currency',
+											currency: 'VND',
+											maximumFractionDigits: 0
+										}).format(context.parsed.y);
+									}
+									return label;
+								}
+							}
+						}
+					}
+				}
+			});
+
+			// Appointment Status Chart
+			var appointmentStatusCtx = document.getElementById('appointmentStatusChart').getContext('2d');
+			var appointmentStatusChart = new Chart(appointmentStatusCtx, {
+				type: 'doughnut',
+				data: {
+					labels: ['Completed', 'Confirmed', 'Pending', 'Cancelled'],
+					datasets: [{
+						data: statusCounts,
+						backgroundColor: ['#1cc88a', '#4e73df', '#f6c23e', '#e74a3b']
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					cutout: '70%',
+					plugins: {
+						legend: {
+							display: false
+						}
+					}
+				}
+			});
+
+			// Popular Services Chart
+			var popularServicesCtx = document.getElementById('popularServicesChart').getContext('2d');
+			var popularServicesChart = new Chart(popularServicesCtx, {
+				type: 'bar',
+				data: {
+					labels: serviceNames,
+					datasets: [{
+						label: 'Bookings',
+						data: serviceBookings,
+						backgroundColor: '#36b9cc'
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					plugins: {
+						legend: {
+							display: false
+						}
+					},
+					scales: {
+						y: {
+							beginAtZero: true,
+							grid: {
+								color: 'rgba(0, 0, 0, 0.05)'
+							}
+						},
+						x: {
+							grid: {
+								display: false
+							}
+						}
+					}
+				}
+			});
+
+			// Artist Appointments Chart
+			var artistAppointmentsCtx = document.getElementById('artistAppointmentsChart').getContext('2d');
+			var artistAppointmentsChart = new Chart(artistAppointmentsCtx, {
+				type: 'bar',
+				data: {
+					labels: artistNames,
+					datasets: [{
+						label: 'Appointments',
+						data: artistAppointments,
+						backgroundColor: '#4e73df'
+					}]
+				},
+				options: {
+					maintainAspectRatio: false,
+					plugins: {
+						legend: {
+							display: false
+						}
+					},
+					scales: {
+						y: {
+							beginAtZero: true,
+							grid: {
+								color: 'rgba(0, 0, 0, 0.05)'
+							}
+						},
+						x: {
+							grid: {
+								display: false
+							}
+						}
+					}
+				}
+			});
+		});
+	</script>
+}

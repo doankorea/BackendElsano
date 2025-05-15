@@ -1,0 +1,50 @@
+// using Microsoft.Extensions.DependencyInjection;
+// using Microsoft.Extensions.Hosting;
+// using System;
+// using System.Linq;
+// using System.Threading;
+// using System.Threading.Tasks;
+// using Microsoft.EntityFrameworkCore;
+
+// public class AppointmentReminderService : BackgroundService
+// {
+//     private readonly IServiceProvider _serviceProvider;
+
+//     public AppointmentReminderService(IServiceProvider serviceProvider)
+//     {
+//         _serviceProvider = serviceProvider;
+//     }
+
+//     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+//     {
+//         while (!stoppingToken.IsCancellationRequested)
+//         {
+//             using (var scope = _serviceProvider.CreateScope())
+//             {
+//                 var context = scope.ServiceProvider.GetRequiredService<MakeupContext>();
+//                 var emailSender = scope.ServiceProvider.GetRequiredService<IEmailSender>();
+
+//                 var upcomingAppointments = await context.Appointments
+//                     .Include(a => a.Artist)
+//                     .Include(a => a.ServiceDetail)
+//                         .ThenInclude(sd => sd.Service)
+//                     .Where(a => a.Status == "Confirmed" && 
+//                                 a.AppointmentDate > DateTime.Now && 
+//                                 a.AppointmentDate <= DateTime.Now.AddMinutes(30))
+//                     .ToListAsync();
+
+//                 foreach (var appointment in upcomingAppointments)
+//                 {
+//                     var artistEmail = appointment.Artist.User.Email; // Ensure this property exists
+//                     var subject = "Upcoming Appointment Reminder";
+//                     var body = $"Reminder: You have an appointment scheduled on {appointment.AppointmentDate} for {appointment.ServiceDetail.Service.ServiceName}.";
+
+//                     await emailSender.SendEmailAsync(artistEmail, subject, body);
+//                 }
+//             }
+
+//             // Wait for a period before checking again
+//             await Task.Delay(TimeSpan.FromMinutes(5), stoppingToken);
+//         }
+//     }
+// }

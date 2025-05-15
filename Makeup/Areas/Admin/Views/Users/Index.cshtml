@@ -1,0 +1,354 @@
+@model IEnumerable<Makeup.Models.User>
+@{
+    ViewData["Title"] = "Quản lý người dùng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layoutadmin.cshtml";
+}
+
+<main role="main">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row align-items-center my-4">
+                    <div class="col">
+                        <h2 class="h3 mb-0 page-title">Quản lý người dùng</h2>
+                    </div>
+                    <div class="col-auto">
+                        <div class="dropdown d-inline mr-2">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-filter fe-12 mr-2"></i>Lọc người dùng
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item @(ViewBag.Status == null ? "active" : "")" asp-action="Index" asp-controller="Users" asp-area="Admin">Tất cả người dùng</a>
+                                <a class="dropdown-item @(ViewBag.Status == "active" ? "active" : "")" asp-action="Index" asp-controller="Users" asp-area="Admin" asp-route-status="active">Người dùng đang hoạt động</a>
+                                <a class="dropdown-item @(ViewBag.Status == "inactive" ? "active" : "")" asp-action="Index" asp-controller="Users" asp-area="Admin" asp-route-status="inactive">Người dùng không hoạt động</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                @if (TempData["StatusMessage"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fe fe-check-circle fe-16 mr-2"></i> @TempData["StatusMessage"]
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                }
+
+                <!-- Statistics Cards -->
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-body text-center">
+                                <div class="avatar avatar-lg mt-4">
+                                    <a href="#">
+                                        <i class="fe fe-check-circle fe-24 text-success"></i>
+                                    </a>
+                                </div>
+                                <div class="card-text my-2">
+                                    <strong class="card-title my-0">Người dùng đang hoạt động</strong>
+                                    <p class="small text-muted mb-0">@Model.Count(u => u.IsActive == 1) người dùng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-body text-center">
+                                <div class="avatar avatar-lg mt-4">
+                                    <a href="#">
+                                        <i class="fe fe-x-circle fe-24 text-danger"></i>
+                                    </a>
+                                </div>
+                                <div class="card-text my-2">
+                                    <strong class="card-title my-0">Người dùng không hoạt động</strong>
+                                    <p class="small text-muted mb-0">@Model.Count(u => u.IsActive == 0) người dùng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-body text-center">
+                                <div class="avatar avatar-lg mt-4">
+                                    <a href="#">
+                                        <i class="fe fe-users fe-24 text-primary"></i>
+                                    </a>
+                                </div>
+                                <div class="card-text my-2">
+                                    <strong class="card-title my-0">Tổng số người dùng</strong>
+                                    <p class="small text-muted mb-0">@Model.Count() người dùng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter tabs -->
+                <div class="card shadow mb-4">
+                    <div class="card-header">
+                        <strong class="card-title">Danh sách người dùng</strong>
+                        @if (ViewBag.Status != null)
+                        {
+                            <span class="badge badge-pill badge-info ml-2">
+                                Đang lọc: @(ViewBag.Status == "active" ? "Đang hoạt động" : "Không hoạt động")
+                            </span>
+                        }
+                    </div>
+                    <div class="card-body">
+                        <!-- Search Box -->
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <form method="get" action="@Url.Action("Index", "Users", new { area = "Admin" })">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Tìm kiếm người dùng..." name="searchTerm" value="@ViewBag.SearchTerm">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="submit">
+                                                <i class="fe fe-search fe-16"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                @{
+                                    var startItem = (ViewBag.CurrentPage - 1) * 10 + 1;
+                                    var endItem = Math.Min(ViewBag.CurrentPage * 10, ViewBag.TotalItems);
+                                }
+                                <span class="text-muted">Hiển thị @startItem - @endItem trong tổng số @ViewBag.TotalItems người dùng</span>
+                            </div>
+                        </div>
+
+                        @if (!Model.Any())
+                        {
+                            <div class="text-center py-5">
+                                <div class="mb-3">
+                                    <i class="fe fe-users fe-24 text-muted"></i>
+                                </div>
+                                <h3 class="h5 mb-4">Không tìm thấy người dùng</h3>
+                                <p class="text-muted">Không có người dùng nào phù hợp với tiêu chí tìm kiếm</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <!-- Users Table -->
+                            <div class="table-responsive">
+                                <table class="table border table-hover bg-white">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="all">
+                                                    <label class="custom-control-label" for="all"></label>
+                                                </div>
+                                            </th>
+                                            <th>ID</th>
+                                            <th>Người dùng</th>
+                                            <th>Email</th>
+                                            <th>Điện thoại</th>
+                                            <th>Vai trò</th>
+                                            <th>Trạng thái</th>
+                                            <th>Ngày tạo</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var user in Model)
+                                        {
+                                            string statusClass = user.IsActive == 1 ? "badge-success" : "badge-danger";
+                                            string statusText = user.IsActive == 1 ? "Hoạt động" : "Không hoạt động";
+
+                                            <tr>
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="check-@user.Id">
+                                                        <label class="custom-control-label" for="check-@user.Id"></label>
+                                                    </div>
+                                                </td>
+                                                <td>@user.Id</td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        @if (!string.IsNullOrEmpty(user.Avatar))
+                                                        {
+                                                            <img src="@user.Avatar" alt="@user.UserName" class="avatar rounded-circle mr-2" style="width: 40px; height: 40px; object-fit: cover;" />
+                                                        }
+                                                        else
+                                                        {
+                                                            <div class="avatar avatar-md mr-2 bg-primary">
+                                                                <span class="avatar-initial rounded-circle">@(user.UserName.Substring(0, 1).ToUpper())</span>
+                                                            </div>
+                                                        }
+                                                        <div>
+                                                            <p class="mb-0">@user.UserName</p>
+                                                            <small class="text-muted">@user.FullName</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td>@user.Email</td>
+                                                <td>@user.PhoneNumber</td>
+                                                <td>
+                                                    @if (ViewBag.UserRoles != null && ViewBag.UserRoles.ContainsKey(user.Id))
+                                                    {
+                                                        foreach (var role in ViewBag.UserRoles[user.Id])
+                                                        {
+                                                            <span class="badge badge-primary mr-1">@role</span>
+                                                        }
+                                                    }
+                                                </td>
+                                                <td><span class="badge @statusClass">@statusText</span></td>
+                                                <td>@user.CreatedAt?.ToString("dd/MM/yyyy")</td>
+                                                <td>
+                                                    <div class="btn-group" role="group">
+                                                        @if (user.IsActive == 1)
+                                                        {
+                                                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="toggleUserStatus(@user.Id, false)" title="Deactivate">
+                                                                <i class="fe fe-pause-circle"></i>
+                                                            </button>
+                                                        }
+                                                        else
+                                                        {
+                                                            <button type="button" class="btn btn-sm btn-outline-success" onclick="toggleUserStatus(@user.Id, true)" title="Activate">
+                                                                <i class="fe fe-play-circle"></i>
+                                                            </button>
+                                                        }
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                @if (ViewBag.TotalPages > 1)
+                {
+                    <div class="row mt-3">
+                        <div class="col-sm-12 col-md-5">
+                            <div class="dataTables_info" role="status" aria-live="polite">
+                                Showing @((ViewBag.CurrentPage - 1) * ViewBag.PageSize + 1) to 
+                                @(Math.Min(ViewBag.CurrentPage * ViewBag.PageSize, ViewBag.TotalItems)) 
+                                of @ViewBag.TotalItems entries
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-7">
+                            <nav aria-label="Page navigation" class="float-right">
+                                <ul class="pagination pagination-sm mb-0">
+                                    <!-- Previous -->
+                                    <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
+                                        <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1, searchTerm = ViewBag.SearchTerm, status = ViewBag.Status })" 
+                                           aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+
+                                    @{
+                                        var startPage = Math.Max(1, ViewBag.CurrentPage - 2);
+                                        var endPage = Math.Min(ViewBag.TotalPages, startPage + 4);
+                                        startPage = Math.Max(1, endPage - 4);
+
+                                        // First page
+                                        if (startPage > 1)
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = 1, searchTerm = ViewBag.SearchTerm, status = ViewBag.Status })">1</a>
+                                            </li>
+                                            if (startPage > 2)
+                                            {
+                                                <li class="page-item disabled"><span class="page-link">...</span></li>
+                                            }
+                                        }
+
+                                        // Page numbers
+                                        for (var i = startPage; i <= endPage; i++)
+                                        {
+                                            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = i, searchTerm = ViewBag.SearchTerm, status = ViewBag.Status })">@i</a>
+                                            </li>
+                                        }
+
+                                        // Last page
+                                        if (endPage < ViewBag.TotalPages)
+                                        {
+                                            if (endPage < ViewBag.TotalPages - 1)
+                                            {
+                                                <li class="page-item disabled"><span class="page-link">...</span></li>
+                                            }
+                                            <li class="page-item">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.TotalPages, searchTerm = ViewBag.SearchTerm, status = ViewBag.Status })">@ViewBag.TotalPages</a>
+                                            </li>
+                                        }
+                                    }
+
+                                    <!-- Next -->
+                                    <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
+                                        <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1, searchTerm = ViewBag.SearchTerm, status = ViewBag.Status })" 
+                                           aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for user status toggle confirmation -->
+    <div class="modal fade" id="statusToggleModal" tabindex="-1" role="dialog" aria-labelledby="statusToggleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="statusToggleModalLabel">Confirm Status Change</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="statusToggleMessage">
+                    Are you sure you want to change the status of this user?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmStatusBtn">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        var userIdToToggle = 0;
+        var activateUser = false;
+
+        function toggleUserStatus(userId, activate) {
+            userIdToToggle = userId;
+            activateUser = activate;
+            
+            if (activate) {
+                $('#statusToggleModalLabel').text('Activate User');
+                $('#statusToggleMessage').text('Are you sure you want to activate this user?');
+                $('#confirmStatusBtn').removeClass('btn-danger').addClass('btn-success');
+            } else {
+                $('#statusToggleModalLabel').text('Deactivate User');
+                $('#statusToggleMessage').text('Are you sure you want to deactivate this user?');
+                $('#confirmStatusBtn').removeClass('btn-success').addClass('btn-danger');
+            }
+            
+            $('#statusToggleModal').modal('show');
+        }
+
+        $(document).ready(function () {
+            $('#confirmStatusBtn').click(function () {
+                if (userIdToToggle > 0) {
+                    window.location.href = '@Url.Action("ToggleStatus", "Users", new { area = "Admin" })/' + userIdToToggle + '?activate=' + activateUser;
+                }
+            });
+        });
+    </script>
+} 

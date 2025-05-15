@@ -1,0 +1,251 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="row align-items-center mb-2">
+                <div class="col">
+                    <h2 class="h5 page-title">Dashboard</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-xl-3 mb-4">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-3 text-center">
+                                    <span class="circle circle-sm bg-primary">
+                                        <i class="fe fe-dollar-sign text-white"></i>
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <p class="small text-muted mb-0">Tổng doanh thu</p>
+                                    <span class="h3 mb-0">@string.Format("{0:N0} VND", ViewBag.TotalRevenue)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mb-4">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-3 text-center">
+                                    <span class="circle circle-sm bg-success">
+                                        <i class="fe fe-dollar-sign text-white"></i>
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <p class="small text-muted mb-0">Thực thu (sau 10% phí)</p>
+                                    <span class="h3 mb-0">@string.Format("{0:N0} VND", ViewBag.ActualRevenue)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mb-4">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-3 text-center">
+                                    <span class="circle circle-sm bg-info">
+                                        <i class="fe fe-users text-white"></i>
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <p class="small text-muted mb-0">Tổng số cuộc hẹn</p>
+                                    <span class="h3 mb-0">@ViewBag.TotalAppointments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3 mb-4">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-3 text-center">
+                                    <span class="circle circle-sm bg-warning">
+                                        <i class="fe fe-percent text-white"></i>
+                                    </span>
+                                </div>
+                                <div class="col">
+                                    <p class="small text-muted mb-0">Tỷ lệ hoàn thành</p>
+                                    <span class="h3 mb-0">@(ViewBag.TotalAppointments > 0 ? string.Format("{0:0.0}%", (double)ViewBag.CompletedCount / ViewBag.TotalAppointments * 100) : "0%")</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Revenue chart -->
+            <div class="row">
+                <div class="col-12 col-lg-8 mb-4">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <strong class="card-title">Doanh thu theo tháng</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; height:320px;">
+                                <canvas id="revenueChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 mb-4">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <strong class="card-title">Thống kê cuộc hẹn</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container" style="position: relative; height:320px;">
+                                <canvas id="appointmentChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detailed statistics -->
+            <div class="row">
+                <div class="col-md-12 mb-4">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <strong>Chi tiết trạng thái cuộc hẹn</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center mb-3">
+                                    <div class="bg-light p-3 rounded">
+                                        <h3 class="text-warning mb-1">@ViewBag.PendingCount</h3>
+                                        <p class="small text-muted mb-0"><span class="dot dot-md bg-warning mr-2"></span>Đang chờ</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center mb-3">
+                                    <div class="bg-light p-3 rounded">
+                                        <h3 class="text-info mb-1">@ViewBag.ConfirmedCount</h3>
+                                        <p class="small text-muted mb-0"><span class="dot dot-md bg-info mr-2"></span>Đã xác nhận</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center mb-3">
+                                    <div class="bg-light p-3 rounded">
+                                        <h3 class="text-success mb-1">@ViewBag.CompletedCount</h3>
+                                        <p class="small text-muted mb-0"><span class="dot dot-md bg-success mr-2"></span>Đã hoàn thành</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center mb-3">
+                                    <div class="bg-light p-3 rounded">
+                                        <h3 class="text-danger mb-1">@ViewBag.CancelledCount</h3>
+                                        <p class="small text-muted mb-0"><span class="dot dot-md bg-danger mr-2"></span>Đã hủy</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Revenue chart
+            var ctx = document.getElementById('revenueChart').getContext('2d');
+            var revenueChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: @Html.Raw(Json.Serialize(ViewBag.MonthLabels)),
+                    datasets: [
+                        {
+                            label: 'Tổng doanh thu',
+                            data: @Html.Raw(Json.Serialize(ViewBag.RevenueData)),
+                            borderColor: '#3f51b5',
+                            backgroundColor: 'rgba(63, 81, 181, 0.1)',
+                            borderWidth: 2,
+                            pointRadius: 3,
+                            fill: true
+                        },
+                        {
+                            label: 'Thực thu (sau 10% phí)',
+                            data: @Html.Raw(Json.Serialize(ViewBag.ActualRevenueData)),
+                            borderColor: '#4caf50',
+                            backgroundColor: 'rgba(76, 175, 80, 0.1)',
+                            borderWidth: 2,
+                            pointRadius: 3,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return new Intl.NumberFormat('vi-VN', {
+                                        style: 'currency',
+                                        currency: 'VND',
+                                        maximumFractionDigits: 0
+                                    }).format(value);
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('vi-VN', {
+                                            style: 'currency',
+                                            currency: 'VND',
+                                            maximumFractionDigits: 0
+                                        }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Appointment Status Chart
+            var apptCtx = document.getElementById('appointmentChart').getContext('2d');
+            var appointmentChart = new Chart(apptCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Đang chờ', 'Đã xác nhận', 'Đã hoàn thành', 'Đã hủy'],
+                    datasets: [
+                        {
+                            data: [@ViewBag.PendingCount, @ViewBag.ConfirmedCount, @ViewBag.CompletedCount, @ViewBag.CancelledCount],
+                            backgroundColor: ['#FF9800', '#3f51b5', '#4CAF50', '#F44336'],
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+}

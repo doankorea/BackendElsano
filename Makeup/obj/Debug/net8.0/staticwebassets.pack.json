@@ -1,0 +1,377 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Makeup\\makeup\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Makeup.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Makeup.dclnfimqr0.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-1.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-1.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-2.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-2.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-3.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-3.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-4.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-4.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-5.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-5.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-6.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-6.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-7.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-7.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\avatars\\face-8.jpg",
+      "PackagePath": "staticwebassets\\assets\\avatars\\face-8.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo.svg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\images\\qrcode.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\qrcode.svg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\products\\p1.jpg",
+      "PackagePath": "staticwebassets\\assets\\products\\p1.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\products\\p2.jpg",
+      "PackagePath": "staticwebassets\\assets\\products\\p2.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\products\\p3.jpg",
+      "PackagePath": "staticwebassets\\assets\\products\\p3.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\assets\\products\\p4.jpg",
+      "PackagePath": "staticwebassets\\assets\\products\\p4.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\apexcharts.css",
+      "PackagePath": "staticwebassets\\css\\apexcharts.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\app-dark.css",
+      "PackagePath": "staticwebassets\\css\\app-dark.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\app-light.css",
+      "PackagePath": "staticwebassets\\css\\app-light.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\app-rtl.css",
+      "PackagePath": "staticwebassets\\css\\app-rtl.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\bootstrap-datepicker.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap-datepicker.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\dataTables.bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\dataTables.bootstrap4.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\css\\daterangepicker.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\dropzone.css",
+      "PackagePath": "staticwebassets\\css\\dropzone.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\dropzone.min.css",
+      "PackagePath": "staticwebassets\\css\\dropzone.min.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\feather.css",
+      "PackagePath": "staticwebassets\\css\\feather.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\fullcalendar.css",
+      "PackagePath": "staticwebassets\\css\\fullcalendar.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\jquery.steps.css",
+      "PackagePath": "staticwebassets\\css\\jquery.steps.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\jquery.timepicker.css",
+      "PackagePath": "staticwebassets\\css\\jquery.timepicker.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\perfect-scrollbar.css",
+      "PackagePath": "staticwebassets\\css\\perfect-scrollbar.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\quill.snow.css",
+      "PackagePath": "staticwebassets\\css\\quill.snow.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\select2-bootstrap4.css",
+      "PackagePath": "staticwebassets\\css\\select2-bootstrap4.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\select2.css",
+      "PackagePath": "staticwebassets\\css\\select2.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\simplebar.css",
+      "PackagePath": "staticwebassets\\css\\simplebar.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\css\\uppy.min.css",
+      "PackagePath": "staticwebassets\\css\\uppy.min.css"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\data\\contacts.json",
+      "PackagePath": "staticwebassets\\data\\contacts.json"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\data\\eu.topo.json",
+      "PackagePath": "staticwebassets\\data\\eu.topo.json"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\fonts\\feather.eot",
+      "PackagePath": "staticwebassets\\fonts\\feather.eot"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\fonts\\feather.svg",
+      "PackagePath": "staticwebassets\\fonts\\feather.svg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\fonts\\feather.ttf",
+      "PackagePath": "staticwebassets\\fonts\\feather.ttf"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\fonts\\feather.woff",
+      "PackagePath": "staticwebassets\\fonts\\feather.woff"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\images\\services\\819e9abd-1658-4426-8803-6e171a740b93_skincare.png",
+      "PackagePath": "staticwebassets\\images\\services\\819e9abd-1658-4426-8803-6e171a740b93_skincare.png"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\images\\services\\bb80d908-06e5-4787-8423-1ba5d2bcf987_eyelash.png",
+      "PackagePath": "staticwebassets\\images\\services\\bb80d908-06e5-4787-8423-1ba5d2bcf987_eyelash.png"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\Chart.min.js",
+      "PackagePath": "staticwebassets\\js\\Chart.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\apexcharts.custom.js",
+      "PackagePath": "staticwebassets\\js\\apexcharts.custom.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\apexcharts.min.js",
+      "PackagePath": "staticwebassets\\js\\apexcharts.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\apps.js",
+      "PackagePath": "staticwebassets\\js\\apps.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\bootstrap-datepicker.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap-datepicker.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\config.js",
+      "PackagePath": "staticwebassets\\js\\config.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\d3.min.js",
+      "PackagePath": "staticwebassets\\js\\d3.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+      "PackagePath": "staticwebassets\\js\\dataTables.bootstrap4.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\datamaps-zoomto.js",
+      "PackagePath": "staticwebassets\\js\\datamaps-zoomto.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\datamaps.all.min.js",
+      "PackagePath": "staticwebassets\\js\\datamaps.all.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\datamaps.custom.js",
+      "PackagePath": "staticwebassets\\js\\datamaps.custom.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\js\\daterangepicker.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\js\\dropzone.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\fullcalendar.custom.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar.custom.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\fullcalendar.js",
+      "PackagePath": "staticwebassets\\js\\fullcalendar.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\gauge.min.js",
+      "PackagePath": "staticwebassets\\js\\gauge.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.mask.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.mask.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.steps.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.steps.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.stickOnScroll.js",
+      "PackagePath": "staticwebassets\\js\\jquery.stickOnScroll.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.timepicker.js",
+      "PackagePath": "staticwebassets\\js\\jquery.timepicker.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\moment.min.js",
+      "PackagePath": "staticwebassets\\js\\moment.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\perfect-scrollbar.min.js",
+      "PackagePath": "staticwebassets\\js\\perfect-scrollbar.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\js\\popper.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\quill.min.js",
+      "PackagePath": "staticwebassets\\js\\quill.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\js\\select2.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\simplebar.min.js",
+      "PackagePath": "staticwebassets\\js\\simplebar.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\tinycolor-min.js",
+      "PackagePath": "staticwebassets\\js\\tinycolor-min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\topojson.min.js",
+      "PackagePath": "staticwebassets\\js\\topojson.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\js\\uppy.min.js",
+      "PackagePath": "staticwebassets\\js\\uppy.min.js"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\3d032695-e681-4474-8948-5b1758e140ce.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\3d032695-e681-4474-8948-5b1758e140ce.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\45e86f62-4167-4109-8fbf-e27e729481a6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\45e86f62-4167-4109-8fbf-e27e729481a6.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\56f65cd0-3e9e-4024-bb22-3cbf6bf99f55.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\56f65cd0-3e9e-4024-bb22-3cbf6bf99f55.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\5e6ee8b4-10d7-4b68-9235-e8e682f9ec52.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\5e6ee8b4-10d7-4b68-9235-e8e682f9ec52.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\7d454cbd-d176-4b74-bb55-a2b8518c7b99.png",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\7d454cbd-d176-4b74-bb55-a2b8518c7b99.png"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\9807e894-ade3-42fd-b3ae-a6c7f6a3e05c.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\9807e894-ade3-42fd-b3ae-a6c7f6a3e05c.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg"
+    },
+    {
+      "Id": "D:\\Makeup\\makeup\\wwwroot\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png",
+      "PackagePath": "staticwebassets\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Makeup.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Makeup.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Makeup.props",
+      "PackagePath": "build\\Makeup.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Makeup.props",
+      "PackagePath": "buildMultiTargeting\\Makeup.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Makeup.props",
+      "PackagePath": "buildTransitive\\Makeup.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

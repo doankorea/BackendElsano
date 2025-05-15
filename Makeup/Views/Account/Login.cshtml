@@ -1,0 +1,179 @@
+﻿@model Makeup.ViewModels.LoginVM
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+	ViewData["Title"] = "Đăng nhập";
+	Layout = null;
+	
+	// Set default ReturnUrl if it's null
+	if (Model != null && Model.ReturnUrl == null)
+	{
+		Model.ReturnUrl = "/";
+	}
+}
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Makeup Artist Platform - Đăng nhập">
+    <meta name="author" content="">
+    <link rel="icon" href="~/favicon.ico">
+    <title>Makeup Artist - Đăng nhập</title>
+    <!-- Simple bar CSS -->
+    <link rel="stylesheet" href="~/css/simplebar.css">
+    <!-- Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="~/css/feather.css">
+    <!-- App CSS -->
+    <link rel="stylesheet" href="~/css/app-light.css" id="lightTheme" disabled>
+    <link rel="stylesheet" href="~/css/app-dark.css" id="darkTheme">
+    <style>
+        .brand-logo {
+            max-width: 120px;
+            margin-bottom: 2rem;
+        }
+        .auth-container {
+            box-shadow: 0 4px 25px rgba(0,0,0,.1);
+            border-radius: 0.5rem;
+            padding: 2.5rem;
+            background-color: #2e3650;
+        }
+        .btn-primary {
+            background-color: #e91e63;
+            border-color: #e91e63;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #d81557;
+            border-color: #d81557;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(233, 30, 99, 0.4);
+        }
+        .form-control:focus {
+            border-color: #e91e63;
+            box-shadow: 0 0 0 0.2rem rgba(233, 30, 99, 0.25);
+        }
+        .auth-footer {
+            margin-top: 1.5rem;
+            font-size: 0.875rem;
+        }
+        .auth-links {
+            margin-top: 1.5rem;
+        }
+        .auth-links a {
+            color: #e91e63;
+            transition: color 0.3s ease;
+        }
+        .auth-links a:hover {
+            color: #f06292;
+        }
+        .help-text {
+            color: #adb5bd;
+            font-size: 0.875rem;
+        }
+        .validation-error {
+            color: #ff8a80;
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body class="dark">
+    <div class="wrapper vh-100">
+        <div class="row align-items-center h-100 justify-content-center">
+            <div class="col-lg-4 col-md-6 col-10">
+                <div class="auth-container text-center">
+                    <h1 class="h4 mb-4">Đăng nhập</h1>
+                    
+                    @if (!string.IsNullOrEmpty(TempData["success"] as string))
+                    {
+                        <div class="alert alert-success mb-4" role="alert">
+                            @TempData["success"]
+                        </div>
+                    }
+                    
+                    @if (!ViewContext.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger mb-4" role="alert">
+                            <div asp-validation-summary="All" class="text-left"></div>
+                            @if (ViewBag.ShowResendLink == true)
+                            {
+                                <p class="mt-2 mb-0">
+                                    <a href="@Url.Action("ResendEmailConfirmation", "Account", new { email = ViewBag.UserEmail })" class="alert-link">
+                                        <i class="fe fe-send mr-1"></i>Gửi lại email xác nhận
+                                    </a>
+                                </p>
+                            }
+                        </div>
+                    }
+                    
+                    <form asp-action="Login" asp-controller="Account" method="post" class="text-left">
+                        <input type="hidden" name="ReturnUrl" value="@(Model?.ReturnUrl ?? "/")" />
+                        
+                        <div class="form-group">
+                            <label for="inputUsername">Tên đăng nhập</label>
+                            <input type="text" asp-for="UserName" id="inputUsername" class="form-control form-control-lg" 
+                                   placeholder="Nhập tên đăng nhập" required autofocus>
+                            <span asp-validation-for="UserName" class="validation-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="inputPassword">Mật khẩu</label>
+                            <input type="password" asp-for="Password" id="inputPassword" class="form-control form-control-lg" 
+                                   placeholder="Nhập mật khẩu" required>
+                            <span asp-validation-for="Password" class="validation-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="rememberMe">
+                                <label class="custom-control-label" for="rememberMe">Ghi nhớ đăng nhập</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group mb-4">
+                            <button class="btn btn-lg btn-primary btn-block" type="submit">
+                                <i class="fe fe-log-in mr-2"></i>Đăng nhập
+                            </button>
+                        </div>
+                        
+                        <div class="auth-links">
+                            <div class="d-flex justify-content-between">
+                                <a asp-action="ForgotPass" asp-controller="Account">Quên mật khẩu?</a>
+                                <a asp-action="Create" asp-controller="Account">Đăng ký</a>
+                            </div>
+                            <div class="text-center mt-3">
+                                <a asp-action="LoginByGoogle" asp-controller="Account" class="btn btn-outline-light btn-sm">
+                                    <img src="https://img.icons8.com/color/16/000000/google-logo.png" class="mr-2" />
+                                    Đăng nhập với Google
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="auth-footer text-muted">© @DateTime.Now.Year Makeup Artist Platform</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Core JS -->
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/simplebar.min.js"></script>
+    
+    <!-- Additional JS -->
+    <script>
+        $(document).ready(function() {
+            // Focus username field on load
+            $('#inputUsername').focus();
+            
+            // Auto hide alerts after 5 seconds
+            setTimeout(function() {
+                $('.alert').fadeOut('slow');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

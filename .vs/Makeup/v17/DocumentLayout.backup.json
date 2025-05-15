@@ -1,0 +1,1263 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Makeup\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\bookappointmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\bookappointmentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\apointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\apointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\vnpay\\paymentinformationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\vnpay\\paymentinformationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\services\\vnpay\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\services\\vnpay\\vnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\vnpay\\paymentresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\vnpay\\paymentresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\libraries\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\libraries\\vnpaylibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\services\\vnpay\\ivnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\services\\vnpay\\ivnpayservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\servicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\servicedetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\makeupartistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\makeupartistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\loginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\areas\\admin\\controllers\\servicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\makeupartistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\makeupartistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\locationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\servicewithdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\servicewithdetailvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\service\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\service\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\areas\\admin\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\areas\\admin\\views\\service\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\areas\\admin\\views\\service\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\areas\\admin\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\areas\\admin\\views\\service\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\areas\\admin\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\areas\\admin\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\makeupartist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\makeupartist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\makeupartist\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\makeupartist\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\registervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\makeup.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\makeup.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\data\\contacts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\data\\contacts.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\messagesviewmodels\\usermessageslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\messagesviewmodels\\usermessageslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\messagesviewmodels\\messagesuserslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\messagesviewmodels\\messagesuserslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\viewmodels\\messagesviewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\viewmodels\\messagesviewmodels\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\makeup.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\makeup.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\shared\\_sidebarpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\apointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\apointment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\message\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\message\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\calendar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\calendar\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\message\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\message\\chat.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\services\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\services\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\services\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\js\\fullcalendar.custom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\js\\fullcalendar.custom.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\js\\fullcalendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\js\\fullcalendar.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\js\\apps.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\js\\apps.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\js\\datatables.bootstrap4.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\js\\datatables.bootstrap4.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Makeup\\Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\css\\app-dark.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\css\\app-dark.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Makeup\\Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Makeup\\Makeup\\wwwroot\\dist\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Makeup\\wwwroot\\dist\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Makeup\\Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Makeup\\Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\migrations\\20250413021810_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\migrations\\20250413021810_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|d:\\makeup\\makeup\\wwwroot\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{6689C152-485F-454F-8C0E-BC711FDC70FD}|Makeup\\Makeup.csproj|solutionrelative:makeup\\wwwroot\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 316,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "VnPayService.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Services\\Vnpay\\VnPayService.cs",
+              "RelativeDocumentMoniker": "Makeup\\Services\\Vnpay\\VnPayService.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Services\\Vnpay\\VnPayService.cs",
+              "RelativeToolTip": "Makeup\\Services\\Vnpay\\VnPayService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T02:50:36.673Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApointmentController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\ApointmentController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\ApointmentController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\ApointmentController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\ApointmentController.cs",
+              "ViewState": "AgIAANUAAAAAAAAAAAAmwPcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:49:48.512Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAmwFoAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:50:56.597Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PaymentInformationModel.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Vnpay\\PaymentInformationModel.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Vnpay\\PaymentInformationModel.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Vnpay\\PaymentInformationModel.cs",
+              "RelativeToolTip": "Makeup\\Models\\Vnpay\\PaymentInformationModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T02:51:39.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IVnPayService.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Services\\Vnpay\\IVnPayService.cs",
+              "RelativeDocumentMoniker": "Makeup\\Services\\Vnpay\\IVnPayService.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Services\\Vnpay\\IVnPayService.cs",
+              "RelativeToolTip": "Makeup\\Services\\Vnpay\\IVnPayService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T02:49:52.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Appointment.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Appointment.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Appointment.cs",
+              "RelativeToolTip": "Makeup\\Models\\Appointment.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T10:46:20.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Payment.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Payment.cs",
+              "RelativeToolTip": "Makeup\\Models\\Payment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T09:59:52.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BookAppointmentVM.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\BookAppointmentVM.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\BookAppointmentVM.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\BookAppointmentVM.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\BookAppointmentVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T08:42:23.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PaymentResponseModel.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Vnpay\\PaymentResponseModel.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Vnpay\\PaymentResponseModel.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Vnpay\\PaymentResponseModel.cs",
+              "RelativeToolTip": "Makeup\\Models\\Vnpay\\PaymentResponseModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T02:51:56.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "VnPayLibrary.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Libraries\\VnPayLibrary.cs",
+              "RelativeDocumentMoniker": "Makeup\\Libraries\\VnPayLibrary.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Libraries\\VnPayLibrary.cs",
+              "RelativeToolTip": "Makeup\\Libraries\\VnPayLibrary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T02:48:00.249Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\ServiceController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\ServiceController.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAowJcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:51:30.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Review.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Review.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Review.cs",
+              "RelativeToolTip": "Makeup\\Models\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T10:00:03.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\appsettings.json",
+              "RelativeDocumentMoniker": "Makeup\\appsettings.json",
+              "ToolTip": "D:\\Makeup\\Makeup\\appsettings.json",
+              "RelativeToolTip": "Makeup\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-30T21:54:36.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAALgAAAAAAAAAAAAgwMYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:49:27.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Location.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Location.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Location.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Location.cs",
+              "RelativeToolTip": "Makeup\\Models\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T23:47:04.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Service.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Service.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Service.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Service.cs",
+              "RelativeToolTip": "Makeup\\Models\\Service.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T20:51:29.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ServiceDetail.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\ServiceDetail.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\ServiceDetail.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\ServiceDetail.cs",
+              "RelativeToolTip": "Makeup\\Models\\ServiceDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T09:59:24.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MakeupArtistVM.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\MakeupArtistVM.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\MakeupArtistVM.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\MakeupArtistVM.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\MakeupArtistVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T23:59:35.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "LoginVM.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\LoginVM.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\LoginVM.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\LoginVM.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\LoginVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T09:05:02.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Message.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\Message.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\Message.cs",
+              "RelativeToolTip": "Makeup\\Models\\Message.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T15:17:39.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Program.cs",
+              "RelativeDocumentMoniker": "Makeup\\Program.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Program.cs",
+              "RelativeToolTip": "Makeup\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAADUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T15:53:23.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ServiceController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "RelativeToolTip": "Makeup\\Areas\\Admin\\Controllers\\ServiceController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T22:01:22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "MakeupArtistController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\MakeupArtistController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\MakeupArtistController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\MakeupArtistController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\MakeupArtistController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwJoAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:50:13.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Service\\Create.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Service\\Create.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Service\\Create.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Service\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T08:20:27.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Service\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Service\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Service\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Service\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-04T08:21:28.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAwwD4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T19:39:50.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LocationController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\LocationController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\LocationController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\LocationController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\LocationController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:50:27.284Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ServiceWithDetailVM.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\ServiceWithDetailVM.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\ServiceWithDetailVM.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\ServiceWithDetailVM.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\ServiceWithDetailVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T13:27:19.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "RelativeToolTip": "Makeup\\Areas\\Admin\\Views\\Service\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-04T06:33:27.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "_Layoutadmin.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Shared\\_Layoutadmin.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Areas\\Admin\\Views\\Shared\\_Layoutadmin.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Shared\\_Layoutadmin.cshtml",
+              "RelativeToolTip": "Makeup\\Areas\\Admin\\Views\\Shared\\_Layoutadmin.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-03T21:58:22.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Areas\\Admin\\Views\\Service\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-03T22:01:41.389Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "Makeup\\Areas\\Admin\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T21:23:26.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Areas\\Admin\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-03T21:50:45.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_SideBarPartial.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Shared\\_SideBarPartial.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Areas\\Admin\\Views\\Shared\\_SideBarPartial.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Areas\\Admin\\Views\\Shared\\_SideBarPartial.cshtml",
+              "RelativeToolTip": "Makeup\\Areas\\Admin\\Views\\Shared\\_SideBarPartial.cshtml",
+              "ViewState": "AgIAALcAAAAAAAAAAAAAAAAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-03T22:00:04.481Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-03T22:03:32.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-02T20:09:48.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Account\\Create.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Account\\Create.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Account\\Create.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Account\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-05T08:40:31.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MessageController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\MessageController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\MessageController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\MessageController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\MessageController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:50:42.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "MakeupArtist.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\MakeupArtist.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\MakeupArtist.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\MakeupArtist.cs",
+              "RelativeToolTip": "Makeup\\Models\\MakeupArtist.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T09:59:58.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "RegisterVM.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\RegisterVM.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\RegisterVM.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\RegisterVM.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\RegisterVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T09:05:28.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\MakeupArtist\\Profile.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\MakeupArtist\\Profile.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\MakeupArtist\\Profile.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\MakeupArtist\\Profile.cshtml",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAcwJoAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-07T00:11:04.274Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg - Bitmap [720x720, 24 bit, JPG]",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg - Bitmap [720x720, 24 bit, JPG]",
+              "RelativeToolTip": "Makeup\\wwwroot\\uploads\\avatars\\5e9ef994-9993-42d2-91f9-2e9cc74b9d89.jpg - Bitmap [720x720, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-28T08:37:12.666Z",
+              "EditorCaption": " - Bitmap [720x720, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "c4a66974-f09e-494f-bae2-6e1ce8e86567.png - PNG [1920x1080, 32 bit, PNG]",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png - PNG [1920x1080, 32 bit, PNG]",
+              "RelativeToolTip": "Makeup\\wwwroot\\uploads\\avatars\\c4a66974-f09e-494f-bae2-6e1ce8e86567.png - PNG [1920x1080, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-28T08:38:56.144Z",
+              "EditorCaption": " - PNG [1920x1080, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg - Bitmap [720x720, 24 bit, JPG]",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg - Bitmap [720x720, 24 bit, JPG]",
+              "RelativeToolTip": "Makeup\\wwwroot\\uploads\\avatars\\3c49c9a6-c1e5-4067-a1b3-b9916f4b751c.jpg - Bitmap [720x720, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-24T15:35:32.69Z",
+              "EditorCaption": " - Bitmap [720x720, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg - Bitmap [512x512, 24 bit, JPG]",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg - Bitmap [512x512, 24 bit, JPG]",
+              "RelativeToolTip": "Makeup\\wwwroot\\uploads\\avatars\\b835fc5a-e987-40cd-acc4-26dc85e2236f.jpg - Bitmap [512x512, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-04-24T16:24:12.568Z",
+              "EditorCaption": " - Bitmap [512x512, 24 bit, JPG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Makeup\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\Makeup\\Makeup\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Makeup\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-13T09:54:21.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UserMessagesListViewModel.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\MessagesViewModels\\UserMessagesListViewModel.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\MessagesViewModels\\UserMessagesListViewModel.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\MessagesViewModels\\UserMessagesListViewModel.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\MessagesViewModels\\UserMessagesListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T15:29:22.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "MessagesUsersListViewModel.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\MessagesViewModels\\MessagesUsersListViewModel.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\MessagesViewModels\\MessagesUsersListViewModel.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\MessagesViewModels\\MessagesUsersListViewModel.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\MessagesViewModels\\MessagesUsersListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T15:28:48.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ChatViewModel.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\ViewModels\\MessagesViewModels\\ChatViewModel.cs",
+              "RelativeDocumentMoniker": "Makeup\\ViewModels\\MessagesViewModels\\ChatViewModel.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\ViewModels\\MessagesViewModels\\ChatViewModel.cs",
+              "RelativeToolTip": "Makeup\\ViewModels\\MessagesViewModels\\ChatViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T15:30:18.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Makeup\\Hubs\\ChatHub.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Makeup\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowB8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T16:21:27.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "contacts.json",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\data\\contacts.json",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\data\\contacts.json",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\data\\contacts.json",
+              "RelativeToolTip": "Makeup\\wwwroot\\data\\contacts.json",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-26T14:58:04.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Makeup",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Makeup.csproj",
+              "RelativeDocumentMoniker": "Makeup\\Makeup.csproj",
+              "ToolTip": "D:\\Makeup\\Makeup\\Makeup.csproj",
+              "RelativeToolTip": "Makeup\\Makeup.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-26T14:58:13.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Makeup\\Models\\User.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Models\\User.cs",
+              "RelativeToolTip": "Makeup\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T09:16:14.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Message\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Message\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Message\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Message\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T14:05:28.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "Makeup.csproj",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Makeup.csproj",
+              "RelativeDocumentMoniker": "Makeup\\Makeup.csproj",
+              "ToolTip": "D:\\Makeup\\Makeup\\Makeup.csproj",
+              "RelativeToolTip": "Makeup\\Makeup.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-13T09:54:09.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "_SideBarPartial.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Shared\\_SideBarPartial.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Shared\\_SideBarPartial.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Shared\\_SideBarPartial.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Shared\\_SideBarPartial.cshtml",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAQwKYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T13:30:36.714Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Apointment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Apointment\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Apointment\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Apointment\\Index.cshtml",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAuwAMBAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-13T02:31:13.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "20250413021810_InitialCreate.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Migrations\\20250413021810_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Makeup\\Migrations\\20250413021810_InitialCreate.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Migrations\\20250413021810_InitialCreate.cs",
+              "RelativeToolTip": "Makeup\\Migrations\\20250413021810_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T02:18:10.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T10:30:18.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAAEwDUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T13:18:26.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Calendar\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Calendar\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Calendar\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Calendar\\Index.cshtml",
+              "ViewState": "AgIAABIBAAAAAAAAAAAswCoBAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T14:05:10.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "CurrentUserService.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Services\\CurrentUserService.cs",
+              "RelativeDocumentMoniker": "Makeup\\Services\\CurrentUserService.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Services\\CurrentUserService.cs",
+              "RelativeToolTip": "Makeup\\Services\\CurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T15:34:12.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Chat.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Message\\Chat.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Message\\Chat.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Message\\Chat.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Message\\Chat.cshtml",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAqwLwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T16:49:02.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Services\\MessageService.cs",
+              "RelativeDocumentMoniker": "Makeup\\Services\\MessageService.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Services\\MessageService.cs",
+              "RelativeToolTip": "Makeup\\Services\\MessageService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADwv3QAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-11T15:32:07.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "CalendarController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\CalendarController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\CalendarController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\CalendarController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\CalendarController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T14:22:53.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T13:17:44.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Controllers\\ReviewController.cs",
+              "RelativeDocumentMoniker": "Makeup\\Controllers\\ReviewController.cs",
+              "ToolTip": "D:\\Makeup\\Makeup\\Controllers\\ReviewController.cs",
+              "RelativeToolTip": "Makeup\\Controllers\\ReviewController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:51:14.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\Views\\Payment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Makeup\\Views\\Payment\\Index.cshtml",
+              "ToolTip": "D:\\Makeup\\Makeup\\Views\\Payment\\Index.cshtml",
+              "RelativeToolTip": "Makeup\\Views\\Payment\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-27T14:05:34.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "cal-init.min.js",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.min.js",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.min.js",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.min.js",
+              "RelativeToolTip": "Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.min.js",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-02T10:41:17.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "cal-init.js",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.js",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.js",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.js",
+              "RelativeToolTip": "Makeup\\wwwroot\\dist\\js\\pages\\calendar\\cal-init.js",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-27T15:47:58.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "app-dark.css",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\css\\app-dark.css",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\css\\app-dark.css",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\css\\app-dark.css",
+              "RelativeToolTip": "Makeup\\wwwroot\\css\\app-dark.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-04-02T19:44:03.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "fullcalendar.js",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\js\\fullcalendar.js",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\js\\fullcalendar.js",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\js\\fullcalendar.js",
+              "RelativeToolTip": "Makeup\\wwwroot\\js\\fullcalendar.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-02T19:48:04.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "dataTables.bootstrap4.min.js",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+              "RelativeToolTip": "Makeup\\wwwroot\\js\\dataTables.bootstrap4.min.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-02T19:49:19.207Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "apps.js",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\js\\apps.js",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\js\\apps.js",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\js\\apps.js",
+              "RelativeToolTip": "Makeup\\wwwroot\\js\\apps.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-02T19:49:24.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "fullcalendar.custom.js",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\js\\fullcalendar.custom.js",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\js\\fullcalendar.custom.js",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\js\\fullcalendar.custom.js",
+              "RelativeToolTip": "Makeup\\wwwroot\\js\\fullcalendar.custom.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAACzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-02T19:49:35.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\dist\\css\\style.css",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\dist\\css\\style.css",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\dist\\css\\style.css",
+              "RelativeToolTip": "Makeup\\wwwroot\\dist\\css\\style.css",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-27T15:15:09.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "fullcalendar.min.css",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css",
+              "RelativeToolTip": "Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.css",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-27T15:16:31.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "fullcalendar.min.js",
+              "DocumentMoniker": "D:\\Makeup\\Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js",
+              "RelativeDocumentMoniker": "Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js",
+              "ToolTip": "D:\\Makeup\\Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js",
+              "RelativeToolTip": "Makeup\\wwwroot\\assets\\libs\\fullcalendar\\dist\\fullcalendar.min.js",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-27T15:16:45.546Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

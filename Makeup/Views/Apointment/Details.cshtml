@@ -1,0 +1,359 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers 
+@model Makeup.Models.Appointment
+@{
+    ViewData["Title"] = "Chi tiết cuộc hẹn";
+}
+
+<main role="main">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row align-items-center my-4">
+                    <div class="col">
+                        <h2 class="h3 mb-0 page-title">Chi tiết cuộc hẹn #@Model.AppointmentId</h2>
+                    </div>
+                    <div class="col-auto">
+                        <a href="@Url.Action("Index", "Apointment")" class="btn btn-outline-primary mr-2">
+                            <i class="fe fe-arrow-left fe-12 mr-2"></i>Quay lại danh sách
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <div class="card shadow mb-4">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h3 class="card-title mb-0">Thông tin cuộc hẹn</h3>
+                                    </div>
+                                    <div class="col-auto">
+                                        <span class="badge 
+                                            @(Model.Status.ToLower() == "pending" ? "badge-warning" : 
+                                              Model.Status.ToLower() == "confirmed" ? "badge-info" :
+                                              Model.Status.ToLower() == "completed" ? "badge-success" :
+                                              Model.Status.ToLower() == "cancelled" ? "badge-danger" : "badge-secondary")
+                                            p-2">
+                                            @Model.Status
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="text-muted">Khách hàng</label>
+                                            <div class="d-flex align-items-center mt-2">
+                                                @if (Model.User != null)
+                                                {
+                                                    if (!string.IsNullOrEmpty(Model.User.Avatar))
+                                                    {
+                                                        <img src="@Model.User.Avatar" alt="@Model.User.UserName" width="50" height="50" class="avatar rounded-circle mr-3">
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="avatar avatar-md mr-3 bg-primary">
+                                                            <span class="avatar-initial rounded-circle">@(Model.User.UserName?.Substring(0, 1).ToUpper() ?? "U")</span>
+                                                        </div>
+                                                    }
+                                                    <div>
+                                                        <p class="mb-0 font-weight-bold">@Model.User.UserName</p>
+                                                        <small class="text-muted">@(Model.User.Email ?? "")</small>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <p class="text-muted">Không có thông tin khách hàng</p>
+                                                }
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-muted">Dịch vụ</label>
+                                            @if (Model.ServiceDetail != null && Model.ServiceDetail.Service != null)
+                                            {
+                                                <p class="font-weight-bold mb-0">@Model.ServiceDetail.Service.ServiceName</p>
+                                                <small class="text-muted">@(string.Format("{0:N0} VND", Model.ServiceDetail.Price))</small>
+                                            }
+                                            else
+                                            {
+                                                <p class="text-muted">Không có thông tin dịch vụ</p>
+                                            }
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-muted">Thời lượng</label>
+                                            @if (Model.ServiceDetail != null)
+                                            {
+                                                <p class="font-weight-bold mb-0">@Model.ServiceDetail.Duration phút</p>
+                                            }
+                                            else
+                                            {
+                                                <p class="text-muted">Không có thông tin thời lượng</p>
+                                            }
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="text-muted">Ngày giờ hẹn</label>
+                                            <p class="font-weight-bold mb-0">@string.Format("{0:dd/MM/yyyy HH:mm}", Model.AppointmentDate)</p>
+                                            @if (Model.ServiceDetail != null)
+                                            {
+                                                <small class="text-muted">
+                                                    Đến @string.Format("{0:HH:mm}", Model.AppointmentDate.AddMinutes(Model.ServiceDetail.Duration))
+                                                </small>
+                                            }
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-muted">Địa điểm</label>
+                                            @if (Model.Location != null)
+                                            {
+                                                <p class="font-weight-bold mb-0">@Model.Location.Address</p>
+                                                if (Model.Location.Latitude != 0 && Model.Location.Longitude != 0)
+                                                {
+                                                    <a href="https://maps.google.com/?q=@Model.Location.Latitude,@Model.Location.Longitude" target="_blank" class="text-primary">
+                                                        <small><i class="fe fe-map-pin mr-1"></i>Xem bản đồ</small>
+                                                    </a>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <p class="text-muted">Không có thông tin địa điểm</p>
+                                            }
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="text-muted">Thời gian tạo</label>
+                                            <p class="font-weight-bold mb-0">@string.Format("{0:dd/MM/yyyy HH:mm}", Model.CreatedAt)</p>
+                                            @if (Model.CreatedAt != Model.UpdatedAt)
+                                            {
+                                                <small class="text-muted">Cập nhật lần cuối: @string.Format("{0:dd/MM/yyyy HH:mm}", Model.UpdatedAt)</small>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @if (Model.Payments != null && Model.Payments.Any())
+                                {
+                                    <hr class="my-4">
+                                    <h5 class="mb-3">Thông tin thanh toán</h5>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th>Mã thanh toán</th>
+                                                    <th>Phương thức</th>
+                                                    <th>Số tiền</th>
+                                                    <th>Trạng thái</th>
+                                                    <th>Ngày thanh toán</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var payment in Model.Payments)
+                                                {
+                                                    <tr>
+                                                        <td>@payment.PaymentId</td>
+                                                        <td>@payment.PaymentMethod</td>
+                                                        <td>@string.Format("{0:N0} VND", payment.Amount)</td>
+                                                        <td>
+                                                            <span class="badge 
+                                                                @(payment.PaymentStatus.ToLower() == "completed" ? "badge-success" : 
+                                                                  payment.PaymentStatus.ToLower() == "pending" ? "badge-warning" :
+                                                                  payment.PaymentStatus.ToLower() == "cancelled" ? "badge-danger" : "badge-secondary")">
+                                                                @payment.PaymentStatus
+                                                            </span>
+                                                        </td>
+                                                        <td>@string.Format("{0:dd/MM/yyyy HH:mm}", payment.CreatedAt)</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                }
+
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <a href="@Url.Action("Index", "Apointment")" class="btn btn-secondary">
+                                            <i class="fe fe-arrow-left fe-12 mr-2"></i>Quay lại
+                                        </a>
+                                    </div>
+                                    <div class="col text-right">
+                                        @if (Model.Status.ToLower() == "pending")
+                                        {
+                                            <button type="button" class="btn btn-success mr-2" onclick="confirmAppointment(@Model.AppointmentId)">
+                                                <i class="fe fe-check fe-12 mr-2"></i>Xác nhận
+                                            </button>
+                                        }
+                                        
+                                        @if (Model.Status.ToLower() == "confirmed")
+                                        {
+                                            <button type="button" class="btn btn-info mr-2" onclick="completeAppointment(@Model.AppointmentId)">
+                                                <i class="fe fe-check-circle fe-12 mr-2"></i>Hoàn thành
+                                            </button>
+                                        }
+                                        
+                                        @if (Model.Status.ToLower() != "cancelled" && Model.Status.ToLower() != "completed")
+                                        {
+                                            <button type="button" class="btn btn-danger" onclick="cancelAppointment(@Model.AppointmentId)">
+                                                <i class="fe fe-x fe-12 mr-2"></i>Hủy
+                                            </button>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal xác nhận cuộc hẹn -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmModalLabel">Xác nhận cuộc hẹn</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn xác nhận cuộc hẹn này không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-success" id="confirmActionBtn">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal hoàn thành cuộc hẹn -->
+    <div class="modal fade" id="completeModal" tabindex="-1" role="dialog" aria-labelledby="completeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="completeModalLabel">Hoàn thành cuộc hẹn</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn đánh dấu cuộc hẹn này là đã hoàn thành không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-info" id="confirmCompleteBtn">Hoàn thành</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal hủy cuộc hẹn -->
+    <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="cancelModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cancelModalLabel">Hủy cuộc hẹn</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Bạn có chắc chắn muốn hủy cuộc hẹn này không?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                    <button type="button" class="btn btn-danger" id="confirmCancelBtn">Có, hủy cuộc hẹn</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        var currentAppointmentId = @Model.AppointmentId;
+
+        function cancelAppointment(appointmentId) {
+            $('#cancelModal').modal('show');
+        }
+
+        function confirmAppointment(appointmentId) {
+            $('#confirmModal').modal('show');
+        }
+
+        function completeAppointment(appointmentId) {
+            $('#completeModal').modal('show');
+        }
+
+        $(document).ready(function () {
+            // Xử lý sự kiện xác nhận hủy
+            $('#confirmCancelBtn').click(function () {
+                // Gọi API để hủy cuộc hẹn
+                $.ajax({
+                    url: '/api/appointments/' + currentAppointmentId + '/cancel',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    success: function (result) {
+                        if (result.success) {
+                            // Đóng modal và làm mới trang
+                            $('#cancelModal').modal('hide');
+                            window.location.reload();
+                        } else {
+                            alert('Lỗi: ' + result.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('Đã xảy ra lỗi: ' + xhr.responseText);
+                    }
+                });
+            });
+
+            // Xử lý sự kiện xác nhận cuộc hẹn
+            $('#confirmActionBtn').click(function () {
+                // Gọi API để xác nhận cuộc hẹn
+                $.ajax({
+                    url: '/api/appointments/' + currentAppointmentId + '/confirm',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    success: function (result) {
+                        if (result.success) {
+                            // Đóng modal và làm mới trang
+                            $('#confirmModal').modal('hide');
+                            window.location.reload();
+                        } else {
+                            alert('Lỗi: ' + result.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('Đã xảy ra lỗi: ' + xhr.responseText);
+                    }
+                });
+            });
+
+            // Xử lý sự kiện hoàn thành cuộc hẹn
+            $('#confirmCompleteBtn').click(function () {
+                // Gọi API để hoàn thành cuộc hẹn
+                $.ajax({
+                    url: '/api/appointments/' + currentAppointmentId + '/complete',
+                    method: 'PUT',
+                    contentType: 'application/json',
+                    success: function (result) {
+                        if (result.success) {
+                            // Đóng modal và làm mới trang
+                            $('#completeModal').modal('hide');
+                            window.location.reload();
+                        } else {
+                            alert('Lỗi: ' + result.message);
+                        }
+                    },
+                    error: function (xhr) {
+                        alert('Đã xảy ra lỗi: ' + xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+} 

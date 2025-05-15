@@ -1,0 +1,46 @@
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model Makeup.ViewModels.ServiceEditVM
+@{
+    ViewData["Title"] = "Edit Service";
+    Layout = "~/Areas/Admin/Views/Shared/_Layoutadmin.cshtml";
+}
+<h2>Edit Service</h2>
+<form asp-action="Edit" asp-controller="Service" asp-area="Admin" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="ServiceId" />
+    <div class="form-group">
+        <label asp-for="ServiceName" class="control-label">Tên dịch vụ</label>
+        <input asp-for="ServiceName" class="form-control" />
+        <span asp-validation-for="ServiceName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Description" class="control-label">Mô tả</label>
+        <textarea asp-for="Description" class="form-control"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageFile" class="control-label">Hình ảnh dịch vụ</label>
+        @if (!string.IsNullOrEmpty(Model.CurrentImageUrl))
+        {
+            <div class="mb-2">
+                <img src="@Model.CurrentImageUrl" alt="@Model.ServiceName" style="max-width: 200px; max-height: 200px;" />
+            </div>
+        }
+        <input asp-for="ImageFile" class="form-control" type="file" accept="image/*" />
+        <span class="text-muted">Chọn ảnh mới để thay thế (không bắt buộc)</span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IsActive" class="control-label">Trạng thái</label>
+        <select asp-for="IsActive" class="form-control">
+            <option value="1">Active</option>
+            <option value="0">Inactive</option>
+        </select>
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" asp-controller="Service" asp-area="Admin" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 

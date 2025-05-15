@@ -1,0 +1,329 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IEnumerable<ServiceDetail>
+@{
+    ViewData["Title"] = "Quản lý dịch vụ";
+    var activeServices = Model.Count(s => s.Service.IsActive == 1);
+    var inactiveServices = Model.Count(s => s.Service.IsActive == 0);
+}
+
+<main role="main">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row align-items-center my-4">
+                    <div class="col">
+                        <h2 class="h3 mb-0 page-title">Quản lý dịch vụ của bạn</h2>
+                    </div>
+                    <div class="col-auto">
+                        <div class="dropdown d-inline mr-2">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fe fe-filter fe-12 mr-2"></i>Lọc dịch vụ
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item active" href="#">Tất cả dịch vụ</a>
+                                <a class="dropdown-item" href="#">Dịch vụ đang hoạt động</a>
+                                <a class="dropdown-item" href="#">Dịch vụ tạm dừng</a>
+                            </div>
+                        </div>
+                        <a href="@Url.Action("Create", "Service")" class="btn btn-primary">
+                            <i class="fe fe-plus fe-12 mr-2"></i>Thêm dịch vụ mới
+                        </a>
+                    </div>
+                </div>
+
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fe fe-check-circle fe-16 mr-2"></i> @TempData["SuccessMessage"]
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                                    </div>
+                }
+
+                @if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="fe fe-alert-circle fe-16 mr-2"></i> @TempData["ErrorMessage"]
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                }
+
+                <div class="row mb-4">
+                    <div class="col-md-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-body text-center">
+                                <div class="avatar avatar-lg mt-4">
+                                    <a href="#">
+                                        <i class="fe fe-check-circle fe-24 text-success"></i>
+                                    </a>
+                                </div>
+                                <div class="card-text my-2">
+                                    <strong class="card-title my-0">Dịch vụ đang hoạt động</strong>
+                                    <p class="small text-muted mb-0">@activeServices dịch vụ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-body text-center">
+                                <div class="avatar avatar-lg mt-4">
+                                    <a href="#">
+                                        <i class="fe fe-x-circle fe-24 text-danger"></i>
+                                    </a>
+                                </div>
+                                <div class="card-text my-2">
+                                    <strong class="card-title my-0">Dịch vụ tạm dừng</strong>
+                                    <p class="small text-muted mb-0">@inactiveServices dịch vụ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow mb-4">
+                            <div class="card-body text-center">
+                                <div class="avatar avatar-lg mt-4">
+                                    <a href="#">
+                                        <i class="fe fe-list fe-24 text-primary"></i>
+                                    </a>
+                                </div>
+                                <div class="card-text my-2">
+                                    <strong class="card-title my-0">Tổng số dịch vụ</strong>
+                                    <p class="small text-muted mb-0">@Model.Count() dịch vụ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card shadow mb-4">
+                    <div class="card-header">
+                        <strong class="card-title">Danh sách dịch vụ</strong>
+                        @if (ViewBag.CurrentFilter != null)
+                        {
+                            <span class="badge badge-pill badge-info ml-2">Đang lọc: @ViewBag.CurrentFilter</span>
+                        }
+                    </div>
+                    <div class="card-body">
+                        @if (!Model.Any())
+                        {
+                            <div class="text-center py-5">
+                                <div class="mb-3">
+                                    <i class="fe fe-package fe-24 text-muted"></i>
+                                </div>
+                                <h3 class="h5 mb-4">Không tìm thấy dịch vụ nào</h3>
+                                <p class="text-muted">Không có dịch vụ nào với điều kiện đã chọn</p>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="table-responsive">
+                                <table class="table table-hover table-borderless border-v">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Hình ảnh</th>
+                                            <th>Tên dịch vụ</th>
+                                            <th>Nghệ sĩ</th>
+                                            <th>Mô tả</th>
+                                            <th>Giá (VNĐ)</th>
+                                            <th>Thời lượng</th>
+                                            <th>Trạng thái</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            string statusClass = item.Service.IsActive == 1 ? "badge-success" : "badge-danger";
+                                            string statusText = item.Service.IsActive == 1 ? "Hoạt động" : "Tạm dừng";
+                                            string statusColor = item.Service.IsActive == 1 ? "#4CAF50" : "#F44336";
+
+                                            <tr>
+                                                <td class="text-muted">@item.ServiceDetailId</td>
+                                                <td>
+                                                    @if (!string.IsNullOrEmpty(item.Service.ImageUrl))
+                                                    {
+                                                        <img src="@item.Service.ImageUrl" alt="@item.Service.ServiceName" class="avatar rounded" style="width: 40px; height: 40px; object-fit: cover;" />
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="avatar avatar-md bg-primary">
+                                                            <span class="avatar-initial rounded">@(item.Service.ServiceName.Substring(0, 1).ToUpper())</span>
+                                                        </div>
+                                                    }
+                                                </td>
+                                                <td>
+                                                    <strong>@item.Service.ServiceName</strong>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        @if (item.Artist != null)
+                                                        {
+                                                            if (!string.IsNullOrEmpty(item.Artist.User?.Avatar))
+                                                            {
+                                                                <img src="@item.Artist.User.Avatar" alt="@item.Artist.FullName" width="30" height="30" class="avatar rounded-circle mr-2">
+                                                            }
+                                                            else
+                                                            {
+                                                                <div class="avatar avatar-sm mr-2 bg-primary">
+                                                                    <span class="avatar-initial rounded-circle">@(item.Artist.FullName.Substring(0, 1).ToUpper())</span>
+                                                                </div>
+                                                            }
+                                                            <span>@item.Artist.FullName</span>
+                                                        }
+                                                        else
+                                                        {
+                                                            <span class="text-muted">Không có</span>
+                                                        }
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <span class="text-truncate d-inline-block" style="max-width: 150px;" title="@item.Service.Description">
+                                                        @item.Service.Description
+                                                    </span>
+                                                </td>
+                                                <td>@string.Format("{0:N0}", item.Price)</td>
+                                                <td>@item.Duration phút</td>
+                                                <td>
+                                                    <span class="badge @statusClass">@statusText</span>
+                                                </td>
+                                                <td>
+                                                    <div class="btn-group" role="group">
+                                                        <a href="@Url.Action("Edit", "Service", new { id = item.ServiceDetailId })" class="btn btn-sm btn-outline-primary mr-1" title="Chỉnh sửa">
+                                                            <i class="fe fe-edit"></i>
+                                                        </a>
+                                                        @if (item.Service.IsActive == 1)
+                                                        {
+                                                            <button type="button" class="btn btn-sm btn-outline-danger" onclick="toggleServiceStatus(@item.ServiceDetailId, false)" title="Tạm dừng dịch vụ">
+                                                                <i class="fe fe-pause-circle"></i>
+                                                            </button>
+                                                        }
+                                                        else
+                                                        {
+                                                            <button type="button" class="btn btn-sm btn-outline-success" onclick="toggleServiceStatus(@item.ServiceDetailId, true)" title="Kích hoạt dịch vụ">
+                                                                <i class="fe fe-play-circle"></i>
+                                                            </button>
+                                                        }
+                                </div>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center my-3">
+                    <div>
+                        <span class="text-muted">Hiển thị @(((ViewBag.CurrentPage - 1) * ViewBag.PageSize) + 1) đến @(Math.Min(ViewBag.CurrentPage * ViewBag.PageSize, ViewBag.TotalCount)) trong tổng số @ViewBag.TotalCount dịch vụ</span>
+                    </div>
+                </div>
+
+                <nav aria-label="Page navigation" class="my-4">
+                    <ul class="pagination justify-content-end">
+                        @if (ViewBag.HasPreviousPage)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("Index", "Service", new { page = ViewBag.CurrentPage - 1, pageSize = ViewBag.PageSize })" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                        }
+
+                        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                        {
+                            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                                <a class="page-link" href="@Url.Action("Index", "Service", new { page = i, pageSize = ViewBag.PageSize })">@i</a>
+                            </li>
+                        }
+
+                        @if (ViewBag.HasNextPage)
+                        {
+                            <li class="page-item">
+                                <a class="page-link" href="@Url.Action("Index", "Service", new { page = ViewBag.CurrentPage + 1, pageSize = ViewBag.PageSize })" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal xác nhận thay đổi trạng thái -->
+    <div class="modal fade" id="statusToggleModal" tabindex="-1" role="dialog" aria-labelledby="statusToggleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="statusToggleModalLabel">Xác nhận thay đổi trạng thái</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="statusToggleMessage">
+                    Bạn có chắc chắn muốn thay đổi trạng thái dịch vụ này không?
+                            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-primary" id="confirmStatusBtn">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@section Scripts {
+    <script>
+        var serviceIdToToggle = 0;
+        var activateService = false;
+
+        function toggleServiceStatus(serviceId, activate) {
+            serviceIdToToggle = serviceId;
+            activateService = activate;
+            
+            if (activate) {
+                $('#statusToggleModalLabel').text('Kích hoạt dịch vụ');
+                $('#statusToggleMessage').text('Bạn có chắc chắn muốn kích hoạt dịch vụ này không?');
+                $('#confirmStatusBtn').removeClass('btn-danger').addClass('btn-success');
+            } else {
+                $('#statusToggleModalLabel').text('Tạm dừng dịch vụ');
+                $('#statusToggleMessage').text('Bạn có chắc chắn muốn tạm dừng dịch vụ này không?');
+                $('#confirmStatusBtn').removeClass('btn-success').addClass('btn-danger');
+            }
+            
+            $('#statusToggleModal').modal('show');
+        }
+
+        $(document).ready(function () {
+            $('#confirmStatusBtn').click(function () {
+                if (serviceIdToToggle > 0) {
+                    // Gọi API để thay đổi trạng thái dịch vụ
+                    window.location.href = '@Url.Action("ToggleStatus", "Service")/' + serviceIdToToggle + '?activate=' + activateService;
+                }
+            });
+        });
+    </script>
+}
